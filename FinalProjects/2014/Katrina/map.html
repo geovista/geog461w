@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head> 
+
+    <title> Effectiveness of Emergency Response Teams to Hurricane Katrina </title>
+    <meta charset="UTF-8">
+
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+    <script src='http://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://personal.psu.edu/rsm5068/Geog461W_SP14/LoadingDataAndMakingGraphics/d3.pcpGeoJson.min.js"></script>
+    <link href='http://personal.psu.edu/rsm5068/Geog461W_SP14/LoadingDataAndMakingGraphics/d3.pcpGeoJson.css' rel='stylesheet' />
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+    <style type="text/css">
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, sans-serif;
+        }
+        .page {
+            width: 960px;
+            height: 720px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .titleBar {
+            width: 100%;
+            height: 75px;
+            text-align: right;
+        }
+
+        .infoBar {
+            float: left;
+            width: 334px;
+            height: 645px;
+        }
+
+        .infoText {
+            width: 324px;
+            height: 490px;
+            font-size: 10pt;
+            max-height: 500px;
+            overflow: auto;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .centered {
+            text-align: center;
+        }
+
+        #generalInfo {
+            height: 480px;
+        }
+
+        #animation {
+            height: 144px;
+            width: 334px;
+            border: 1px solid black;
+            font-size: 8pt;
+        }
+
+        #animation .title {
+            width: 100%;
+            text-align: center;
+            font-weight: bold;
+            font-size: 10pt;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #animation .subtitle {
+            width: 100%;
+            text-align: center;
+            font-size: 9pt;
+            font-weight: bolder;
+            padding-top: 2px;
+        }
+
+        #animation .left {
+            display: block;
+            width: 100px;
+            height: 30px;
+            float: left;
+            margin-left: 5px;
+            text-align: left;
+        }
+
+        #animation .right {
+            display: block;
+            width: 200px;
+            height: 30px;
+            float: right;
+            text-align: right;
+        }
+
+        #animation ul.symbols {
+            margin-left: 12px;
+            margin-top: 0;
+            margin-bottom: 0; 
+            padding: 0;
+            float: left;
+            list-style: none;
+        }
+
+        #animation ul.symbols li {
+            display: block;
+            float: left;
+            width: 100px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 7pt;
+            list-style: none;
+        }
+
+        #animation ul.categories {
+            margin-left: 12px;
+            margin-top: 4px;
+            margin-bottom: 0; 
+            padding: 0;
+            float: left;
+            list-style: none;
+        }
+
+        #animation ul.categories li {
+            display: block;
+            float: left;
+            width: 50px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 7pt;
+            list-style: none;
+        }
+
+        #animation ul.categories li span.catColor {
+            display: block;
+            float: left;
+            width: 50px;
+            height: 15px;
+        }
+
+        #map {
+            float: right;
+            width: 620px;
+            height: 645px;
+        }
+
+        #timeControls {
+            background: #fff;
+            border: 1px solid #eee;
+            position: absolute;
+            left: 340px;
+            top: 660px;
+            width: 142px;
+            height: 42px;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body> 
+    <div class="page">
+        <div id="titleBar" class="titleBar">
+            <h1>Effectiveness of Response to Hurricane Katrina (2005)</h1>
+        </div>
+        <div id="map"></div> 
+        <div id="infoBar" class="infoBar">
+            <div id="infoText" class="infoText">
+                <div id="generalInfo">
+                    <h3 class="centered">Overview of Events</h3>
+                    <p>The 2005 hurricane season saw three of the six most intense hurricanes on record for the United States, with the most notable being Hurricane Katrina.</p>
+                    <p>Katrina formed on August 23, 2005 over the Bahamas as a Category 1 hurricane, then strengthened to a Category 5 over the Gulf of Mexico, and finally made landfall on August 29 as a Category 3. The storm surge resulted in severe damage along the entire Gulf Coast, and the catastrophic failure of the New Orleans levee system. This failure resulted in the flooding of over 80% of the city and prompted a lawsuit against the Army Corps of Engineer (COE) for what some called the “worst civil engineering disaster in U.S. history.”</p>
+                    <p>After the dissipation of Hurricane Katrina, the aftermath revealed that it was one of the costliest natural disasters to date, both in terms of loss of life and property damage. Katrina caused an estimated $81 billion in property damage, and resulted in nearly 1,833 deaths, making it the deadliest U.S. hurricane since Okeechobee in 1928.</p>
+                </div>
+                <div id="completeInfo" style="display:none">
+                    <h3 class="centered">Response by Component</h3>
+                    <h4 class="centered">US Coast Guard</h4>
+                    <p>Over 5,600 Coast Guardsmen participated in Katrina response efforts</p>
+                    <p>Mission areas</p>
+                    <ul>
+                        <li>Search and rescue</li>
+                        <li>marine pollution response</li>
+                        <li>management of government maritime commerce</li>
+                    </ul>
+
+                    <h4 class="centered">Evacuation Routes</h4>
+                    <p>Issues hampering evacuation</p>
+                    <ul>
+                        <li>Over-reliance of westward traffic movement</li>
+                        <li>Inefficient loading of the contraflow freeway segment of out New Orleans</li>
+                        <li>Extreme congestion resulting from confluence of multiple regional evacuation routes</li>
+                        <li>Lack of real time traffic information</li>
+                    </ul>
+                    <p>Resulted in between 100,000 to 300,000 people who did not or simply could not evacuate the city (<a href="http://www.nae.edu/Publications/Bridge/TheAftermathofKatrina/EvacuationPlanningandEngineeringforHurricaneKatrina.aspx ">NAE</a>)
+
+                    <h4 class="centered">Flood Zones</h4>
+                    <p>National Flood Insurance Program paid out $16.1 billion in claims, $13 billion of those went to Louisiana (<a href="http://www.cnn.com/2013/08/23/us/hurricane-katrina-statistics-fast-facts/">CNN</a>)
+
+                    <h4 class="centered">Relief Shelter and Health Care Facilities</h4>
+                    <p>Relief shelters housed 273,000 people at their peak (<a href="http://www.cnn.com/2013/08/23/us/hurricane-katrina-statistics-fast-facts/">CNN</a>)</p>
+
+                    <h4 class="centered">Department of Defense Involvement</h4>
+                    <p>10,000 national guard troops in Louisiana and Mississippi, Army Corps of Engineers (COE) in charge of: mobilizing military and contracting resources to close levee breaches, repair pumps to de-water New Orleans, deliver food and water (<a href="http://www.army.mil/article/45029/The_Army_response_to_Hurricane_Katrina/">ARMY</a>)</p>
+                </div>
+                <div id="progressiveInfo" style="display:none;">
+                    <h3 class="centered">Actions Taken by Government Officials</h3>
+                    <div id="actionsText">No actions taken by US officials at this time</div>
+                </div>
+            </div>
+            <div id="animation" class="animation">
+                <div class="title">Hurricane Replay</div>
+                <div id="activate" class="left">
+                    <input id="animateOn" type="radio" name="activate"><label for="animateOn">On</label>
+                    <input id="animateOff" type="radio" name="activate" checked="checked"><label for="animateOff">Off</label>
+                </div>
+                <div id="style" class="right">
+                    <input id="progressive" type="radio" name="style" checked="checked"><label for="progressive">Progressive</label>
+                    <input id="complete" type="radio" name="style"><label for="complete">Complete</label>
+                </div>
+                <div id="legend">
+                    <ul class="symbols">
+                        <li>
+                            <svg width="100" height="24" viewPort="0 0 100 24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <line x1="10" y1="12" x2="90" y2="12" stroke="#FF9900" stroke-width="2"/>
+                            </svg>
+                            Hurricane Path
+                        </li>
+                        <li>
+                            <div style="width:100px;height:24px;padding-top:3px;">
+                                <img src="./img/hurricane.png" width="24">
+                            </div>
+                            Current Position
+                        </li>
+                        <li>
+                            <svg vwidth="100" height="24" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="12" r="7" stroke="black" fill="lightgrey"/>
+                            </svg>
+                            Past Position
+                        </li>
+                    </ul>
+                    <div class="subtitle">
+                        Hurricane Categories
+                    </div>
+                    <ul class="categories">
+                        <li><span class="catColor" style="background: #fee5d9;"></span>Trop. Dep.</li>
+                        <li><span class="catColor" style="background: #fcbba1;"></span>1</li>
+                        <li><span class="catColor" style="background: #fc9272;"></span>2</li>
+                        <li><span class="catColor" style="background: #fb6a4a;"></span>3</li>
+                        <li><span class="catColor" style="background: #de2d26;"></span>4</li>
+                        <li><span class="catColor" style="background: #a50f15;"></span>5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="timeControls" style="display: none;">
+            <button id="backward">backward</button>
+            <button id="play">play</button>
+            <button id="forward">forward</button>
+        </div>
+        <script type ="text/javascript"> 
+
+            var fmapCoastGuard = [],
+                fmapEvacRoutes = [],
+                fmapFloodZones = [],
+                fmapHealthCareCenters = [],
+                fmapHeliports = [],
+                fmapMilitaryBases = [],
+                fmapUSaceNavWaterwayPorts = [],
+                fgrpCoastGuard,
+                fgrpEvacRoutes,
+                fgrpFloodZones,
+                fgrpHealthCareCenters,
+                fgrpHeliports,
+                fgrpHurricane = L.layerGroup(),
+                fgrpMilitaryBases,
+                fgrpUSaceNavWaterwayPorts,
+                layerControl,
+                rawHurricanePath,
+                rawHurricanePoints,
+                replayTimeStep = 0,
+                replayTimer = null;
+
+            var map = L.mapbox.map("map", "khe5010.hnmh0j94", {
+                center : L.latLng(31.672083485607402, -83.1005859375),
+                zoom : 5
+            });
+
+            map
+                .on('zoomend', function () {
+                    if (map.getZoom() == 12) {
+                        layerControl
+                            .addOverlay(fgrpHealthCareCenters, "Non-Emergency Health Care Centers")
+                            .addOverlay(fgrpHeliports, "Heliports");
+
+                    } else if (map.getZoom() == 11) {
+                        if (map.hasLayer(fgrpHealthCareCenters)) { 
+                            map.removeLayer(fgrpHealthCareCenters)
+                        }
+
+                        if (map.hasLayer(fgrpCoastGuard)) { 
+                            map.removeLayer(fgrpCoastGuard)
+                        }
+
+                        if (map.hasLayer(fgrpHeliports)) { 
+                            map.removeLayer(fgrpHeliports)
+                        }
+
+                        layerControl
+                            .removeLayer(fgrpHealthCareCenters)
+                            .removeLayer(fgrpHeliports);
+                    }
+                })
+                .on('ready', function () {
+                    loadDataLayers();
+                })
+
+            $("#activate").buttonset();
+            $("#style").buttonset();
+
+            $("#animateOn").click(function () { loadReplay(true) });
+            $('#animateOff').click(function () { loadReplay(false) });
+
+            $("#progressive").click(function () { switchToComplete(false); });
+            $("#complete").click(function () { switchToComplete(true); });
+
+            $("#backward")
+                .button({
+                    'text' : false,
+                    'icons' : {
+                        'primary' : 'ui-icon-seek-prev'
+                    }
+                })
+                .click(function () {
+                    if (replayTimer) { stopReplay(); }
+                    incrementTimeStep(-1);
+                });
+            $("#play")
+                .button({
+                    'text' : false,
+                    'icons' : {
+                        'primary' : 'ui-icon-play'
+                    }
+                })
+                .click(function () {
+                    if (replayTimer) {
+                        stopReplay();
+                    } else {
+                        replayTimer = setInterval(function () { incrementTimeStep(1); }, 1000);
+                        $("#play").button("option", "icons", {"primary": "ui-icon-pause"});
+                        buildProgressiveReplay();
+                    }
+                });
+            $("#forward")
+                .button({
+                    'text' : false,
+                    'icons' : {
+                        'primary' : 'ui-icon-seek-next'
+                    }
+                })
+                .click(function () {
+                    if (replayTimer) { stopReplay(); }
+                    incrementTimeStep(1);
+                });
+
+            // ---- Utility Functions ----
+
+            function loadDataLayers () {
+                queue(4)
+                    .defer(loadData, "./data/coastGuard.json")
+                    .defer(loadData, "./data/evacRoutes.json")
+                    .defer(loadData, "./data/floodZones.json")
+                    .defer(loadData, "./data/healthCareCenters.json")
+                    .defer(loadData, "./data/heliports.json")
+                    .defer(loadData, "./data/Hurriccane.Lines.Path.json")
+                    .defer(loadData, "./data/Hurriccane.Points.CycloneCenters.json")
+                    .defer(loadData, "./data/militaryBases.json")
+                    .defer(loadData, "./data/usaceNavWaterwayPorts.json")
+                    .await(function (error, coastGuard, evacRoutes, floodZones, healthCareCenters, heliports, HurriccaneLinesPath, HurriccanePointsCycloneCenters, militaryBases, usaceNavWaterwayPorts) { 
+
+                        if (error) { console.log(error) }
+
+                        rawHurricanePath = HurriccaneLinesPath;
+                        rawHurricanePoints = HurriccanePointsCycloneCenters;
+
+                        fgrpCoastGuard = L.geoJson(coastGuard, {
+                            'onEachFeature' : function (feature, layer) {
+
+                                // Creates an icon
+                                var icon = L.icon({
+                                    iconUrl: './img/icon_26500.png',  // Tells the icon which image to use
+                                    iconSize: [24, 24]       
+                                });
+
+                                layer.setIcon(icon); // Telling the layer to use the new icon you just made
+
+                                fmapCoastGuard.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpEvacRoutes = L.geoJson(evacRoutes, {
+                            'style' : styleEvacRoutes,
+                            'onEachFeature' : function (feature, layer) {
+                                if (layer instanceof L.Marker) {
+                                    layer.setIcon(L.divIcon({
+                                        'className' : 'countyIcon',
+                                        'html' : feature.properties.MUNICIPAL1,
+                                        'iconSize' : [32,32]
+                                       
+                                    
+                                    }));
+                                }
+                                
+                                fmapEvacRoutes.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpFloodZones = L.geoJson(floodZones, {
+                            'style' : styleFloodZones,
+                            'onEachFeature' : function (feature, layer) {
+                                fmapFloodZones.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpHealthCareCenters = L.geoJson(healthCareCenters, {
+                            'onEachFeature' : function (feature, layer) {
+
+                                // Creates an icon
+                                var icon = L.icon({
+                                    iconUrl: './img/icon_34777.png',  // Tells the icon which image to use
+                                    iconSize: [24, 24]       
+                                });
+
+                                layer.setIcon(icon); // Telling the layer to use the new icon you just made
+                                fmapHealthCareCenters.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpHeliports = L.geoJson(heliports, {
+                            'onEachFeature' : function (feature, layer) {
+
+                                // Creates an icon
+                                var icon = L.icon({
+                                    iconUrl: './img/icon_6236.png',  // Tells the icon which image to use
+                                    iconSize: [24, 24]       
+                                });
+
+                                layer.setIcon(icon); // Telling the layer to use the new icon you just made
+                                fmapHeliports.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpMilitaryBases = L.geoJson(militaryBases, {
+                            'style' : styleMilitaryBases,
+                            'onEachFeature' : function (feature, layer) {
+                                fmapMilitaryBases.push({'feature':feature, 'layer':layer});
+                            }
+                        })
+
+                        fgrpUSaceNavWaterwayPorts = L.geoJson(usaceNavWaterwayPorts, {
+                            'filter' : function (feature, layer) {
+                                return (feature.properties.DEPTH1 > 50)
+                            },
+                            'onEachFeature' : function (feature, layer) {
+                            fmapUSaceNavWaterwayPorts.push({'feature':feature, 'layer':layer});
+                            }
+                        });
+
+                        var overlays = {
+                            "Evacuation Routes" : fgrpEvacRoutes,
+                            "Military Bases" : fgrpMilitaryBases,
+                            "US Coast Guard Stations" : fgrpCoastGuard,
+                            "USACE Navigable Waterway Ports (Depth 50ft+)" : fgrpUSaceNavWaterwayPorts
+                        }
+
+                        layerControl = L.control.layers(null, overlays).addTo(map);
+                        map.addLayer(fgrpHurricane)
+
+                    });
+            }
+
+            function loadData (url, callback) {
+              d3.json(url, function (error, data) {
+                callback(error, data);
+              });
+            }
+
+            function styleEvacRoutes (feature) {
+                return { 
+                    "color" : "#649364",
+                    "weight" : "1"
+                }
+            }
+
+            function styleFloodZones (feature) {
+                return {
+                    "color" : "#00B8E6",
+                    "weight" : ".5"
+                }
+            }
+
+            function styleHurriccaneLinesPath (feature) {
+                return { 
+                    "color" : "#FF9900",
+                    "weight" : "2"
+                }
+            }
+
+            function styleMilitaryBases (feature) {
+                return { 
+                    "color" : "#336699",
+                    "weight" : "1"
+                }
+            }
+
+            // ---- Replay Functionality ----
+
+            function loadReplay (shouldLoad) {
+                if (shouldLoad) {
+                    $("#generalInfo").css("display", "none")
+                    switchToComplete($("#complete").prop("checked"));
+                } else {
+                    if (replayTimer) {
+                        stopReplay();
+                        replayTimeStep = 0;
+                    }
+
+                    fgrpHurricane.clearLayers();
+                    $("#timeControls").css("display", "none")
+                    $("#completeInfo").css("display", "none")
+                    $("#progressiveInfo").css("display", "none")
+                    $("#generalInfo").css("display", "block")
+                }
+            }
+
+            function switchToComplete (shouldSwitch) {
+
+                if ($("#animateOn").prop("checked")) {
+                    if (shouldSwitch) {
+                        if (replayTimer) { stopReplay() }
+
+                        $("#timeControls").css("display", "none")
+                        $("#completeInfo").css("display", "block")
+                        $("#progressiveInfo").css("display", "none")
+                        buildCompleteReplay();
+                    } else {
+                        $("#timeControls").css("display", "block")
+                        $("#progressiveInfo").css("display", "block")
+                        $("#completeInfo").css("display", "none") 
+                        buildProgressiveReplay();
+                    }
+                }
+            }
+
+            function incrementTimeStep (increment) {
+                if (replayTimeStep === 0 && increment < 0) {
+                    replayTimeStep = getMaxTimeStep();
+                } else if (replayTimeStep === 31 && increment > 0) {
+                    replayTimeStep = 0;
+                } else {
+                    replayTimeStep += increment;
+                }
+
+                if (replayTimeStep < 31) {
+                    buildProgressiveReplay();
+                }
+            }
+
+            function buildCompleteReplay () {
+                fgrpHurricane
+                    .clearLayers()
+                    .addLayer(L.geoJson(rawHurricanePath, {
+                        'style' : styleHurriccaneLinesPath
+                    }))
+                    .addLayer(L.geoJson(rawHurricanePoints, {
+                        'onEachFeature' : function (feature, layer) {
+                            layer.setIcon(L.icon({
+                                iconUrl : getIconForPoint(feature),
+                                iconSize : [15, 11.4]
+                            }))
+                        }
+                    }))
+            }
+
+            function buildProgressiveReplay () {
+
+                var replayLine = {
+                    'type' : 'Feature',
+                    'properties' : rawHurricanePath.properties,
+                    'geometry' : {
+                        'type' : rawHurricanePath.geometry.type,
+                        'coordinates' : rawHurricanePath.geometry.coordinates.slice(0, replayTimeStep + 1)
+                    }
+                }
+
+                fgrpHurricane
+                    .clearLayers()
+                    .addLayer(L.geoJson(replayLine, {
+                        'style' : styleHurriccaneLinesPath
+                    }))
+
+                for (var i = 0; i <= replayTimeStep; i++) {
+                    var point = rawHurricanePoints.features[i],
+                        layer, 
+                        popup = L.popup().setContent(
+                            "<div style='font-weight:bold;text-align:center;'>Hurricane Katrina</div>" + 
+                            "<table>" + 
+                                "<tr><td>Timestamp</td><td>" + point.properties.time + " " + 
+                                                               point.properties.year + "-" + 
+                                                               point.properties.month + "-" + 
+                                                               point.properties.day + "</td></tr>" +
+                                "<tr><td>Stage</td><td>" + point.properties.stage + "</td></tr>" +
+                                "<tr><td>Wind Speed (mph)</td><td>" + point.properties.windSpeed + "</td></tr>" +
+                                "<tr><td>Pressure (pascals)</td><td>" + point.properties.pressure + "</td></tr></table>");
+
+                    if (i === replayTimeStep) {
+                        var icon = L.icon({
+                            iconUrl : getIconForPoint(point),
+                            iconSize : [20, 15.5]
+                        })
+
+                        layer = L.marker(
+                            L.latLng(point.geometry.coordinates[1], point.geometry.coordinates[0]),
+                            {'icon' : icon});
+
+                        console.log(point);
+
+                        $("#actionsText").html(point.properties.desc || "No actions taken by US officials at this time");
+                    } else {
+                        layer = L.circleMarker( 
+                            L.latLng(point.geometry.coordinates[1], point.geometry.coordinates[0]),
+                            {
+                                'color' : '#fff',
+                                'opacity' : 1,
+                                'fillColor' : getColorForPoint(point),
+                                'fillOpacity' : 1
+                            }).setRadius(4);
+                    }
+
+                    fgrpHurricane.addLayer(layer.bindPopup(popup));
+                }
+            }
+
+            function stopReplay () {
+                clearInterval(replayTimer);
+                replayTimer = null;
+                $("#play").button("option", "icons", {"primary": "ui-icon-play"});
+            }
+
+            function getColorForPoint (feature) {
+                if (feature.properties.windSpeed >= 157) {
+                    return "#a50f15";
+                } else if (feature.properties.windSpeed >= 130) {
+                    return "#de2d26";
+                } else if (feature.properties.windSpeed >= 111) {
+                    return "#fb6a4a";
+                } else if (feature.properties.windSpeed >= 96) {
+                    return "#fc9272";
+                } else if (feature.properties.windSpeed >= 74) {
+                    return "#fcbba1";
+                } else {
+                    return "#fee5d9";
+                }
+            }
+
+            function getIconForPoint (feature) {
+                if (feature.properties.windSpeed >= 157) {
+                    return "./img/hurricane5.png";
+                } else if (feature.properties.windSpeed >= 130) {
+                    return "./img/hurricane4.png";
+                } else if (feature.properties.windSpeed >= 111) {
+                    return "./img/hurricane3.png";
+                } else if (feature.properties.windSpeed >= 96) {
+                    return "./img/hurricane2.png";
+                } else if (feature.properties.windSpeed >= 74) {
+                    return "./img/hurricane1.png";
+                } else {
+                    return "./img/hurricaneTD.png";
+                }
+            }
+
+        </script> 
+    </div>
+</body> 
+</html>

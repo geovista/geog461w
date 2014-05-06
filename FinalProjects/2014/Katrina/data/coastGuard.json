@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 1.0, "OSTGEOG8_1": 1.0, "NAME": "F EDWARD HEBERT FB", "ADDRESS": "600 SOUTH STREET", "STATEABBRV": "LA", "ZIPCODE": "70130", "COUNTYCODE": "71", "LAT": 29.945556, "LONG_": -90.065 }, "geometry": { "type": "Point", "coordinates": [ -90.065071106031269, 29.945760726570299 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 2.0, "OSTGEOG8_1": 2.0, "NAME": "HALE BOGGS FB CTHS", "ADDRESS": "500 CAMP STREET", "STATEABBRV": "LA", "ZIPCODE": "70130", "COUNTYCODE": "71", "LAT": 29.9375, "LONG_": -90.068333 }, "geometry": { "type": "Point", "coordinates": [ -90.068405151119123, 29.937704085621711 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 3.0, "OSTGEOG8_1": 3.0, "NAME": "OPEN LAND - FDA SITE", "ADDRESS": "EST CHARLES + GIROD", "STATEABBRV": "LA", "ZIPCODE": "70130", "COUNTYCODE": "71", "LAT": 29.9375, "LONG_": -90.068333 }, "geometry": { "type": "Point", "coordinates": [ -90.068405151119123, 29.937704085621711 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 4.0, "OSTGEOG8_1": 4.0, "NAME": "A J ELLENDER FB USP", "ADDRESS": "423 LAFAYETTE ST", "STATEABBRV": "LA", "ZIPCODE": "70360", "COUNTYCODE": "109", "LAT": 29.598611, "LONG_": -90.716111 }, "geometry": { "type": "Point", "coordinates": [ -90.716201781615766, 29.598825453390372 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 5.0, "OSTGEOG8_1": 5.0, "NAME": "HUNTER BUILDING", "ADDRESS": "1020 DAVID DRIVE", "STATEABBRV": "LA", "ZIPCODE": "70380", "COUNTYCODE": "101", "LAT": 29.7, "LONG_": -91.205556 }, "geometry": { "type": "Point", "coordinates": [ -91.205665588394268, 29.700208663583684 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 6.0, "OSTGEOG8_1": 6.0, "NAME": "MARINE TRANS BLDG", "ADDRESS": "PORT OF LAKE CHARLE", "STATEABBRV": "LA", "ZIPCODE": "70601", "COUNTYCODE": "19", "LAT": 30.216111, "LONG_": -93.253611 }, "geometry": { "type": "Point", "coordinates": [ -93.253761291429655, 30.216316221725751 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 7.0, "OSTGEOG8_1": 7.0, "NAME": "FEDERAL BLDG USPO", "ADDRESS": "750 FLORIDA STREET", "STATEABBRV": "LA", "ZIPCODE": "70801", "COUNTYCODE": "121", "LAT": 30.448611, "LONG_": -91.1825 }, "geometry": { "type": "Point", "coordinates": [ -91.182609558869075, 30.448801039945433 ] } },
+{ "type": "Feature", "properties": { "AREA": 0.0, "PERIMETER": 0.0, "OSTGEOG8XU": 8.0, "OSTGEOG8_1": 8.0, "NAME": "UNNAMED BUILDING", "ADDRESS": "626 MAIN STREET", "STATEABBRV": "LA", "ZIPCODE": "70801", "COUNTYCODE": "121", "LAT": 30.449444, "LONG_": -91.187778 }, "geometry": { "type": "Point", "coordinates": [ -91.187881469634462, 30.449634550827618 ] } }
+]
+}

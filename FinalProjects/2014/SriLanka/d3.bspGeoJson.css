@@ -1,0 +1,15 @@
+.axis {
+    font-size: 8pt;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.selected {
+  stroke: yellow;
+  stroke-width: 1px;
+}

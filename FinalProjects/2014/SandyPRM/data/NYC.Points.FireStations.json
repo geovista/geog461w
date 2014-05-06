@@ -1,0 +1,4137 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 4/Ladder 15",
+        "address": {
+          "address": "42 South Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00762431279752,
+          40.703481824100784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 10/Ladder 10",
+        "address": {
+          "address": "124 Liberty Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01264923082664,
+          40.710077931099676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 6",
+        "address": {
+          "address": "49 Beekman Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00529719226051,
+          40.710116451698866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 7/Ladder 1/Battalion 1/Manhattan Borough Command",
+        "address": {
+          "address": "100 104 Duane Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 8",
+        "address": {
+          "address": "14 Moore Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.14180036722318,
+          40.5719624022829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 9/Ladder 6",
+        "address": {
+          "address": "75 Canal Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9929135279171,
+          40.715206614384726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 15/Ladder 18/Battalion 4",
+        "address": {
+          "address": "25 Pitt Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98387453236614,
+          40.71589419174613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 28/Ladder 11",
+        "address": {
+          "address": "222 2nd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98868134362539,
+          40.676218094122326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 5",
+        "address": {
+          "address": "340 14th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01216133192125,
+          40.602869958393725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 55",
+        "address": {
+          "address": "363 Broome Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.995611494005,
+          40.72000899402116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 20/Division 1",
+        "address": {
+          "address": "253 Lafayette Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99674126087083,
+          40.72308925423994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 24/Ladder 5/Battalion 2",
+        "address": {
+          "address": "227 29 6th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 33/Ladder 9",
+        "address": {
+          "address": "42 Great Jones Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99273366351122,
+          40.72684384144384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 3/Battalion 6",
+        "address": {
+          "address": "108 13th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00878820109483,
+          40.607439353965255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 18",
+        "address": {
+          "address": "132 10th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.11667758296012,
+          40.569959628462286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 34/Ladder 21",
+        "address": {
+          "address": "440 38th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00464748301961,
+          40.65258153415405
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 26",
+        "address": {
+          "address": "220 37th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99323604203327,
+          40.59442609143111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 3/Ladder 12/Battalion 7",
+        "address": {
+          "address": "150 19th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00517628373903,
+          40.60405783823241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 1/Ladder 24",
+        "address": {
+          "address": "142 46 West 31st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 14",
+        "address": {
+          "address": "14 18th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99767328685581,
+          40.66658207760514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 16 / Ladder 7 ",
+        "address": {
+          "address": "234 29th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9987336114046,
+          40.598451466201254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 21",
+        "address": {
+          "address": "238 40th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99137771686678,
+          40.59278680070762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 54/Ladder 4/Battalion 9",
+        "address": {
+          "address": "782 8th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98710390760777,
+          40.76092814635433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 23",
+        "address": {
+          "address": "215 58th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.02121132152874,
+          40.64442531166604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rescue 1",
+        "address": {
+          "address": "530 43rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99633340636012,
+          40.760841045016065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 40/Ladder 35",
+        "address": {
+          "address": "131 Amsterdam Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98483669543882,
+          40.77416385459065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 25/District Office 4/Division 3",
+        "address": {
+          "address": "205 207 West 77th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 74",
+        "address": {
+          "address": "120 83rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.03496365796735,
+          40.6267904990636
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 65",
+        "address": {
+          "address": "33 43rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98575656415986,
+          40.59465935923993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 8 / Ladder 2 / Battalion 8",
+        "address": {
+          "address": "167 51st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01823606096853,
+          40.64900981931605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 39/Ladder 16",
+        "address": {
+          "address": "157 59 East 67th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 44",
+        "address": {
+          "address": "221 75th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.02987091024609,
+          40.63198477945752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 22/Ladder 13/Battalion 10",
+        "address": {
+          "address": "159 85th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.03449479624265,
+          40.62524861005466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 58/Ladder 26",
+        "address": {
+          "address": "1367 5th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9476416569621,
+          40.79904141395605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 53/Ladder 43",
+        "address": {
+          "address": "1836 46 3rd Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 91",
+        "address": {
+          "address": "242 111th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95615827671006,
+          40.80055262424866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 35/Ladder 14",
+        "address": {
+          "address": "2282 3rd Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93617530108855,
+          40.80318728851114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 76/Ladder 22/Battalion 11",
+        "address": {
+          "address": "145 51 West 100th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 47",
+        "address": {
+          "address": "502 113th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96261534976621,
+          40.80491963241156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 59/Ladder 30",
+        "address": {
+          "address": "111 133rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94218935344372,
+          40.813001170243375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 37/Ladder 40",
+        "address": {
+          "address": "415 125th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8425601567867,
+          40.79282000423984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 69/Ladder 28/Battalion 16",
+        "address": {
+          "address": "248 143rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9414800409704,
+          40.820922910266816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 80/Ladder 23",
+        "address": {
+          "address": "503 139th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95046431843996,
+          40.82151265748504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 84/Ladder 34",
+        "address": {
+          "address": "513 161st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.80008470505878,
+          40.79577531701346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 67",
+        "address": {
+          "address": "518 170th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93747097801291,
+          40.84163614311259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 93/Ladder 45/Battalion 13",
+        "address": {
+          "address": "515 181st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 95/Ladder 36",
+        "address": {
+          "address": "29 Vermilyea Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92538539805811,
+          40.8649713775209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marine 1",
+        "address": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 60/Ladder 17/Battalion 14",
+        "address": {
+          "address": "341 143rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9433453417909,
+          40.82177493132576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 41",
+        "address": {
+          "address": "330 150th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.81810427852294,
+          40.797355894694945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 71/Ladder 55/Division 6",
+        "address": {
+          "address": "720 Melrose Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9157774070479,
+          40.820389550841206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 50/Ladder 19",
+        "address": {
+          "address": "1155 Washington Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 92/Ladder 44/Battalion 17",
+        "address": {
+          "address": "1259 Morris Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91334693039914,
+          40.834609184611345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "EMS Station 17 ",
+        "address": {
+          "address": "1080 Ogden Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92815280283116,
+          40.83504661570118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 68/Ladder 49",
+        "address": {
+          "address": "1160 Ogden Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92713217714852,
+          40.836840038726635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "EMS Station 26",
+        "address": {
+          "address": "1264 Boston Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90072908013177,
+          40.83074586853325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 73/Ladder 42/Battalion 26",
+        "address": {
+          "address": "655 Prospect Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90351198008376,
+          40.815072383967504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 94/Ladder 48/Battalion 3",
+        "address": {
+          "address": "1226 Seneca Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88836288981311,
+          40.81871004373168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 42",
+        "address": {
+          "address": "1781 Monroe Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90656498261312,
+          40.846205186364536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 43/Ladder 59",
+        "address": {
+          "address": "1901 Sedgwick Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91682532477923,
+          40.85487806167291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rescue 3",
+        "address": {
+          "address": "1655 Washington Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 46, Ladder 27",
+        "address": {
+          "address": "460 Cross Bronx Expressway",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bronx Borough Command, District Office 6 & 7 ",
+        "address": {
+          "address": "451 176th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8994165753452,
+          40.846221682782385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 82/Ladder 31",
+        "address": {
+          "address": "1213 Intervale Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89487792255349,
+          40.82863061136138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 48/Ladder 56/Division 7",
+        "address": {
+          "address": "2417 Webster Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89356177532432,
+          40.85946622532268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 88/Ladder 38",
+        "address": {
+          "address": "2225 Belmont Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88785459504217,
+          40.851363983750616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 45/Ladder 58/Battalion 18",
+        "address": {
+          "address": "925 Tremont Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8837105510018,
+          40.841784502544506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 75/Ladder 33/Battalion 19",
+        "address": {
+          "address": "2175 Walton Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9042795530419,
+          40.85600651373484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 81/Ladder 46",
+        "address": {
+          "address": "3025 Bailey Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90352726231195,
+          40.87678194259248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 79/Ladder 37/Battalion 27",
+        "address": {
+          "address": "2928 Briggs Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88682768356821,
+          40.870401655139204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "  Engine 96/Ladder 54",
+        "address": {
+          "address": "1689 Story Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8696029893488,
+          40.82278591683103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 64/Ladder 47/District Office 7",
+        "address": {
+          "address": "1214 Castle Hill Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.85108626288923,
+          40.832294197519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 90/Ladder 41",
+        "address": {
+          "address": "1843 White Plains Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.86651494019986,
+          40.84620233825883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 61/Battalion 20",
+        "address": {
+          "address": "1518 Williamsbridge Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 97",
+        "address": {
+          "address": "1454 Astor Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8443813271817,
+          40.859588411585506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 62/Ladder 32",
+        "address": {
+          "address": "3431 White Plains Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8671068463124,
+          40.876412327933465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 38/Ladder 51",
+        "address": {
+          "address": "3446 Eastchester Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84661416443676,
+          40.87755475947522
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 63/Ladder 39/Battalion 15",
+        "address": {
+          "address": "755 233rd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.85552140260164,
+          40.89283695236097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 66/Ladder 61",
+        "address": {
+          "address": "21 Asch Loop",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.83083157472399,
+          40.871024756112284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 89/Ladder 50",
+        "address": {
+          "address": "2924 Bruckner Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 72",
+        "address": {
+          "address": "3929 Tremont Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.81850643504475,
+          40.821262017594584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 70/Ladder 53",
+        "address": {
+          "address": "169 Schofield Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.78465267924474,
+          40.84537172185399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 207/Ladder 110/Battalion 31/Division 11/Brooklyn Borough Command",
+        "address": {
+          "address": "172 Tillary Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98315588389917,
+          40.69587075902538
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 226",
+        "address": {
+          "address": "409 State Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 205/Ladder 118",
+        "address": {
+          "address": "74 Middagh Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99214438305376,
+          40.700119787505216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 224",
+        "address": {
+          "address": "274 Hicks Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99693571475441,
+          40.69305281683565
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 279/Ladder 131",
+        "address": {
+          "address": "252 Lorraine Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9994906321842,
+          40.67227222400202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 202/Ladder 101/Battalion 32",
+        "address": {
+          "address": "31 Richards Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00639390236576,
+          40.68058010915199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 228",
+        "address": {
+          "address": "436 39th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00528988515666,
+          40.65207624498756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 201/Ladder 114/Battalion 40",
+        "address": {
+          "address": "5113 5117 4th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 1",
+        "address": {
+          "address": "788 Union Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97647775330316,
+          40.67482712322462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 239",
+        "address": {
+          "address": "395 4th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98742422709374,
+          40.67173656875773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 220/Ladder 122",
+        "address": {
+          "address": "530 532 11th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 105",
+        "address": {
+          "address": "494 Dean Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97387153278812,
+          40.68137366851228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 280/Ladder 132",
+        "address": {
+          "address": "489 91 Saint John&#65533;s Place",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rescue 2",
+        "address": {
+          "address": "1472 Bergen Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93499338180507,
+          40.67525748042045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 234/Ladder 123/Battalion 38",
+        "address": {
+          "address": "1352 Saint John&#65533;s Place",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 227",
+        "address": {
+          "address": "423 25 Ralph Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 233/Ladder 176",
+        "address": {
+          "address": "25 Rockaway Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91164512086668,
+          40.682554382976654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 217",
+        "address": {
+          "address": "940 Dekalb Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93793679775571,
+          40.69289360979201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 222/Battalion 37",
+        "address": {
+          "address": "32 Ralph Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.17497863384283,
+          40.542680318110364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 214/Ladder 111",
+        "address": {
+          "address": "495 Hancock Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93574286763182,
+          40.684201738171986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 230",
+        "address": {
+          "address": "701 Park Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96499857212763,
+          40.76929184122679
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 235/Battalion 57",
+        "address": {
+          "address": "206 Monroe Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9842973809298,
+          40.712395813141775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 102",
+        "address": {
+          "address": "850 56 Bedford Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marine 6",
+        "address": {
+          "address": "292 Brooklyn",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 210",
+        "address": {
+          "address": "160 Carlton Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97282151883344,
+          40.69286139761023
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 211/Ladder 119",
+        "address": {
+          "address": "26 Hooper Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96275997350672,
+          40.70124821724748
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 221/Ladder 104",
+        "address": {
+          "address": "161 2nd Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.12119791896592,
+          40.57322590067131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 216/Ladder 108/Battalion 35",
+        "address": {
+          "address": "187 Union Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.15805722876287,
+          40.63169359209091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 238/Ladder 106",
+        "address": {
+          "address": "205 Greenpoint Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95107606198809,
+          40.73052752237077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 229/Ladder 146",
+        "address": {
+          "address": "75 77 Richardson Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 206",
+        "address": {
+          "address": "1201 Grand Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 237",
+        "address": {
+          "address": "43 Morgan Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9316475023036,
+          40.70533515210801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 218",
+        "address": {
+          "address": "650 Hart Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92679861809974,
+          40.698416100868634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 271/Ladder 124/Battalion 28",
+        "address": {
+          "address": "392 Himrod Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91616411313693,
+          40.7037795716201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 277/Ladder 112",
+        "address": {
+          "address": "582 Knickerbocker Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9144175753797,
+          40.69653141172324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 252",
+        "address": {
+          "address": "617 Central Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90819463446213,
+          40.68846514282494
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 231/Ladder 120/Battalion 44",
+        "address": {
+          "address": "107 Watkins Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9079505296477,
+          40.67019773929101
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 283/Division 15",
+        "address": {
+          "address": "885 Howard Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.09889473745791,
+          40.61253424378323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 332/Ladder 175",
+        "address": {
+          "address": "165 Bradford Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89283117443794,
+          40.67530907747244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 290/Ladder 103",
+        "address": {
+          "address": "480 Sheffield Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89520374159531,
+          40.665176558783216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 236",
+        "address": {
+          "address": "998 Liberty Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87288203704223,
+          40.67783281515993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 225/Ladder 107/Battalion 39",
+        "address": {
+          "address": "799 Lincoln Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.09159314008092,
+          40.570239386921685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 310/Ladder 174/Battalion 58",
+        "address": {
+          "address": "5105 Snyder Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.92916111482774,
+          40.650207730527676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 249/Ladder 113",
+        "address": {
+          "address": "491 Rogers Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95347235430214,
+          40.66020648557927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 248",
+        "address": {
+          "address": "2900 Snyder Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95033661168253,
+          40.6488505664385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 281/Ladder 147",
+        "address": {
+          "address": "1210 Cortelyou Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96692096044526,
+          40.64005731120268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 255/Ladder 157",
+        "address": {
+          "address": "1367 Rogers Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95094788169321,
+          40.63677344997108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 240/Battalion 48",
+        "address": {
+          "address": "1307 Prospect Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89823233660618,
+          40.82791916793555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 282/Ladder 148",
+        "address": {
+          "address": "4210 12 12th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 247",
+        "address": {
+          "address": "1336 60th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99785244523878,
+          40.6283878530526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 241/Ladder 109",
+        "address": {
+          "address": "6630 3rd Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93180510295194,
+          40.807863542095845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 242",
+        "address": {
+          "address": "9219 5th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.02941384157329,
+          40.61772819083951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 284/Ladder 149",
+        "address": {
+          "address": "1157 79th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.01294370342812,
+          40.61995567033647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 243/Ladder 168/Battalion 42",
+        "address": {
+          "address": "8653 18th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00366450118115,
+          40.606258010569945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 250",
+        "address": {
+          "address": "126 Foster Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97623861161254,
+          40.627714443285775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 330/Ladder 172 ",
+        "address": {
+          "address": "2312 65th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97898928225787,
+          40.612349379260806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 276/Ladder 156/Battalion 33",
+        "address": {
+          "address": "1635 14th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.959332909588,
+          40.609478175062385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 253",
+        "address": {
+          "address": "2429 86th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98861615463387,
+          40.59880726725723
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 318/Ladder 166",
+        "address": {
+          "address": "2510 14 Neptune Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 254/Ladder 153",
+        "address": {
+          "address": "901 Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 245/Ladder 161/Battalion 43",
+        "address": {
+          "address": "2929 8th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9327138049079,
+          40.772550236817466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 257/Ladder 170",
+        "address": {
+          "address": "1361 Rockaway Parkway",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90379884166332,
+          40.64651588064044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 323",
+        "address": {
+          "address": "6405 Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 309/Ladder 159",
+        "address": {
+          "address": "1851 48th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.89500378464652,
+          40.77423591298665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 246/Ladder 169",
+        "address": {
+          "address": "2732 11th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95914975953383,
+          40.5843393871812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 321",
+        "address": {
+          "address": "2165 Gerritsen Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93553535765153,
+          40.602220156491875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 258/Ladder 115",
+        "address": {
+          "address": "10 40 47th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 325/Ladder 163",
+        "address": {
+          "address": "41 24 51st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 259/Ladder 128/Battalion 45",
+        "address": {
+          "address": "33 51 Greenpoint Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 260",
+        "address": {
+          "address": "11 15 37th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 261/Ladder 116",
+        "address": {
+          "address": "3720 22 29th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 262",
+        "address": {
+          "address": "30 89 21st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 263/Ladder 117/Battalion 49",
+        "address": {
+          "address": "42 06 Astoria Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 312",
+        "address": {
+          "address": "22 63 35th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 307/Ladder 154",
+        "address": {
+          "address": "81 17 North Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 289/Ladder 138",
+        "address": {
+          "address": "97 28 43rd Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 316",
+        "address": {
+          "address": "27 12 Kearney Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 324/Division 14",
+        "address": {
+          "address": "108 01 Horace Harding Blvd",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eng 292/Rescue 4",
+        "address": {
+          "address": "64 18 Queens Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 288/Hazmat 1",
+        "address": {
+          "address": "56 29 68th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 287/Ladder 136/Battalion 46",
+        "address": {
+          "address": "86 53 Grand Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 291/Ladder 140",
+        "address": {
+          "address": "56 07 Metropolitan Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 305/Ladder 151",
+        "address": {
+          "address": "111 02 Queens Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 286/Ladder 135",
+        "address": {
+          "address": "66 44 Myrtle Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 319",
+        "address": {
+          "address": "78 11 67th Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 297/Ladder 130",
+        "address": {
+          "address": "119 11 14th Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 295/Ladder 144",
+        "address": {
+          "address": "12 49 149th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 273/Ladder 129",
+        "address": {
+          "address": "40 18 Union Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99730537029814,
+          40.66636706143507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 274/Battalion 52",
+        "address": {
+          "address": "41 20 Murray Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 320/Ladder 167",
+        "address": {
+          "address": "36 18 Francis Lewis Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 306/Battalion 53",
+        "address": {
+          "address": "40 18 214th Place",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 315/Ladder 125",
+        "address": {
+          "address": "159 06 Union Turnpike",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 299/Ladder 152",
+        "address": {
+          "address": "61 20 Utopia Parkway",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 326/Ladder 160",
+        "address": {
+          "address": "64 04 Springfield Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 313/Ladder 164",
+        "address": {
+          "address": "44 01 244th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 251",
+        "address": {
+          "address": "254 20 Union Turnpike",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 293",
+        "address": {
+          "address": "89 40 87th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 285/Ladder 142",
+        "address": {
+          "address": "103 17 98th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 143",
+        "address": {
+          "address": "101 02 Jamaica Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squad 270/Division 13",
+        "address": {
+          "address": "91 45 121st Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 308/Battalion 51",
+        "address": {
+          "address": "107 12 Lefferts Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 298/Ladder 127/Battalion 50",
+        "address": {
+          "address": "153 11 Hillside Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 303/Ladder 126",
+        "address": {
+          "address": "104 12 Princeton Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 275",
+        "address": {
+          "address": "111 36 Merrick Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 301/Ladder 150",
+        "address": {
+          "address": "91 04 197th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 304/Ladder 162",
+        "address": {
+          "address": "218 44 97th Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 302/Ladder 155",
+        "address": {
+          "address": "143 15 Rockaway Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 317/Ladder 165/Battalion 54",
+        "address": {
+          "address": "117 11 196th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 311/Ladder 158",
+        "address": {
+          "address": "145 50 Springfield Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 314",
+        "address": {
+          "address": "142 04 Brookville Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 331/Ladder 173",
+        "address": {
+          "address": "158 57 Cross Bay Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 264/Engine 328/Ladder 134",
+        "address": {
+          "address": "16 15 Central Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 265/Ladder 121/Battalion 47 EMS Station 47",
+        "address": {
+          "address": "48 06 Rockaway Beach Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 266/Battalion 47",
+        "address": {
+          "address": "92 20 Rockaway Beach Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 268/Ladder 137",
+        "address": {
+          "address": "257 Beach 116th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.83756917884942,
+          40.580223646992316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 329",
+        "address": {
+          "address": "402 Beach 169th Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.88183299202151,
+          40.56600008280312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marine 9",
+        "address": null
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0,
+          0
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 155/Ladder 78",
+        "address": {
+          "address": "14 Brighton Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08765181546892,
+          40.637765640678566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladder 79/Battalion 22",
+        "address": {
+          "address": "1189 Castleton Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.12208707359571,
+          40.63418274110876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 156",
+        "address": {
+          "address": "412 Broadway",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00215855837826,
+          40.71908269233097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 163/Ladder 83",
+        "address": {
+          "address": "875 Jewett Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1309507261026,
+          40.615323648568605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 153/Ladder 77",
+        "address": {
+          "address": "74 Broad Street",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 165/Ladder 85",
+        "address": {
+          "address": "3067 Richmond Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 157/Ladder 80",
+        "address": {
+          "address": "1573 Castleton Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1355276751853,
+          40.63608495862731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 158",
+        "address": {
+          "address": "65 Harbor Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.16019824730337,
+          40.63545695208291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 166/Ladder 86",
+        "address": {
+          "address": "1400 Richmond Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 154/District Office 8/ Staten Island Borough Command",
+        "address": {
+          "address": "3730 Victory Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.18020778435054,
+          40.598358612535016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 152/Battalion 21",
+        "address": {
+          "address": "256 Hylan Boulevard",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.07057077180082,
+          40.61180532407129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 161/Ladder 81",
+        "address": {
+          "address": "278 Mc Clean Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0701806548985,
+          40.596799790341976
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 160/Rescue 5/Division 8",
+        "address": {
+          "address": "1850 Clove Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.08899257304886,
+          40.60740899327438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 159",
+        "address": {
+          "address": "1592 Richmond Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9869510002884,
+          40.756053999992105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 162/Ladder 82/Battalion 23",
+        "address": {
+          "address": "256 Nelson Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.14714342671226,
+          40.54319521386728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 167/Ladder 87",
+        "address": {
+          "address": "345 Annadale Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1757840990712,
+          40.55424042804048
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 164/Ladder 84",
+        "address": {
+          "address": "1560 Drumgoole Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.19586797765248,
+          40.535292191091195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 168/EMS Station 23",
+        "address": {
+          "address": "1100 Rossville Avenue",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.21270276893073,
+          40.553637211430434
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Engine 151/Ladder 76",
+        "address": {
+          "address": "7219 Amboy Road",
+          "city": "New York",
+          "state": "NY",
+          "zip": ""
+        }
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.23884398395188,
+          40.51254313329987
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1474 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 1,
+        "Name": "1",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "16 Ericsson Place",
+        "Phone": "(212) 334-0611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0069962,
+          40.7202061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 5,
+        "Name": "5",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "19 Elizabeth Street",
+        "Phone": "(212) 334-0711"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99748699999999,
+          40.716188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 6,
+        "Name": "6",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "233 West 10 Street",
+        "Phone": "(212) 741-4811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0054123,
+          40.7338831
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 7,
+        "Name": "7",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "19 1/2 Pitt Street",
+        "Phone": "(212) 477-7311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9839341,
+          40.7163623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 9,
+        "Name": "9",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "321 East 5 Street",
+        "Phone": "(212) 477-7811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9879327,
+          40.7264639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 10,
+        "Name": "10",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "230 West 20th Street",
+        "Phone": "(212) 741-8211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99866600000001,
+          40.742685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 13,
+        "Name": "13",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "230 East 21st Street",
+        "Phone": "(212) 477-7411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9827007,
+          40.73673960000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 14,
+        "Name": "14",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "357 West 35th Street ",
+        "Phone": "(212) 239-9811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.994835,
+          40.7539299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 17,
+        "Name": "17",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "167 East 51st Street",
+        "Phone": "(212) 826-3211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9711731,
+          40.75682150000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 18,
+        "Name": "18",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "306 West 54th Street",
+        "Phone": "(212) 767-8400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9850802,
+          40.7649192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 19,
+        "Name": "19",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "153 East 67th Street",
+        "Phone": "(212) 452-0600"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96379,
+          40.76717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 20,
+        "Name": "20",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "120 West 82nd Street",
+        "Phone": "(212) 580-6411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9749964,
+          40.7842825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 22,
+        "Name": "22",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "86th St & Transverse Road ",
+        "Phone": "(212) 570-4820"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9750413,
+          40.7876973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 23,
+        "Name": "23",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "162 East 102nd Street",
+        "Phone": "(212) 860-6411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94736639999999,
+          40.7891801
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 24,
+        "Name": "24",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "151 West 100th Street",
+        "Phone": "(212) 678-1811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9672592,
+          40.7964599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 25,
+        "Name": "25",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "120 East 119th Street",
+        "Phone": "(212) 860-6511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.94111099999999,
+          40.80068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 26,
+        "Name": "26",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "520 West 126th Street",
+        "Phone": "(212) 678-1311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9564674,
+          40.8150017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 28,
+        "Name": "28",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "2271-89 8th Avenue",
+        "Phone": "(212) 678-1611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9525476,
+          40.808701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 30,
+        "Name": "30",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "451 West 151st Street",
+        "Phone": "(212) 690-8811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.943716,
+          40.8288143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 32,
+        "Name": "32",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "250 West 135th Street",
+        "Phone": "(212) 690-6311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9452222,
+          40.8158555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 33,
+        "Name": "33",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "2207 Amsterdam Avenue",
+        "Phone": "(212) 927-3200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9358766,
+          40.84075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 34,
+        "Name": "34",
+        "State": "NY",
+        "County": "New York",
+        "City": "New York",
+        "Address": "4295 Broadway",
+        "Phone": "(212) 927-9711"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.93540689999999,
+          40.8515984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 40,
+        "Name": "40",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "257 Alexander Avenue",
+        "Phone": "(718) 402-2270"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9252023,
+          40.8103211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 41,
+        "Name": "41",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "1035 Longwood Avenue",
+        "Phone": "(718) 542-4771"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8956331,
+          40.8161582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 42,
+        "Name": "42",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "830 Washington Avenue",
+        "Phone": "(718) 402-3887"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9116923,
+          40.8221283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 43,
+        "Name": "43",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "900 Fteley Avenue",
+        "Phone": "(718) 542-0888"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.869649,
+          40.823097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 44,
+        "Name": "44",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "2 East 169th Street",
+        "Phone": "(718) 590-5511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9195688,
+          40.8374992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 45,
+        "Name": "45",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "2877 Barkley Avenue",
+        "Phone": "(718) 822-5411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.827304,
+          40.830869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 46,
+        "Name": "46",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "2120 Ryer Avenue",
+        "Phone": "(718) 220-5211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90033269999999,
+          40.854063
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 47,
+        "Name": "47",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "4111 Laconia Avenue",
+        "Phone": "(718) 920-1211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.847585,
+          40.88742200000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 48,
+        "Name": "48",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "450 Cross Bronx Expressway",
+        "Phone": "(718) 299-3900"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9005209,
+          40.8439849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 49,
+        "Name": "49",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "2121 Eastchester Road",
+        "Phone": "(718) 918-2000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.84396100000001,
+          40.856474
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 50,
+        "Name": "50",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "3450 Kingsbridge Avenue",
+        "Phone": "(718) 543-5700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9025219,
+          40.8837344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 52,
+        "Name": "52",
+        "State": "NY",
+        "County": "Bronx",
+        "City": "Bronx",
+        "Address": "3016 Webster Avenue",
+        "Phone": "(718) 220-5811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.879543,
+          40.8691419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 60,
+        "Name": "60",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "2951 West 8th Street",
+        "Phone": "(718) 946-3311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.976156,
+          40.5796316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 61,
+        "Name": "61",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "2575 Coney Island Avenue",
+        "Phone": "(718) 627-6611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96039999999999,
+          40.594119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 62,
+        "Name": "62",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "1925 Bath Avenue",
+        "Phone": "(718) 236-2611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0030252,
+          40.6022551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 63,
+        "Name": "63",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "1844 Brooklyn Avenue",
+        "Phone": "(718) 258-4411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9414305,
+          40.6279587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 66,
+        "Name": "66",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "5822 16th Avenue",
+        "Phone": "(718) 851-5611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9910446,
+          40.6258832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 67,
+        "Name": "67",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "2820 Snyder Avenue",
+        "Phone": "(718) 287-3211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95031600000002,
+          40.648623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 68,
+        "Name": "68",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "333 65th Street",
+        "Phone": "(718) 439-4211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.022729,
+          40.6389906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 69,
+        "Name": "69",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "9720 Foster Avenue",
+        "Phone": "(718) 257-6211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.90490199999999,
+          40.648408
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 70,
+        "Name": "70",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "154 Lawrence Avenue",
+        "Phone": "(718) 851-5511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.973697,
+          40.630329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 71,
+        "Name": "71",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "421 Empire Boulevard",
+        "Phone": "(718) 735-0511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.947711,
+          40.664506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 72,
+        "Name": "72",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "830 4th Avenue",
+        "Phone": "(718) 965-6311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00044869999999,
+          40.6582367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 73,
+        "Name": "73",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "1470 East New York Avenue",
+        "Phone": "(718) 495-5411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9134934,
+          40.6711214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 75,
+        "Name": "75",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "1000 Sutter Avenue",
+        "Phone": "(718) 827-3511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.881421,
+          40.6710909
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 77,
+        "Name": "77",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "191 Union Street",
+        "Phone": "(718) 834-3211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00025210000001,
+          40.6838313
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 76,
+        "Name": "76",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "127 Utica Avenue",
+        "Phone": "(718) 735-0611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9302584,
+          40.6747071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 78,
+        "Name": "78",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "65 6th Avenue",
+        "Phone": "(718) 636-6411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9741579,
+          40.6805874
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 79,
+        "Name": "79",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "263 Tompkins Avenue",
+        "Phone": "(718) 636-6611"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9448433,
+          40.6888144
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 81,
+        "Name": "81",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "30 Ralph Avenue",
+        "Phone": "(718) 574-0411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9243521,
+          40.6896628
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 83,
+        "Name": "83",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "480 Knickerbocker Avenue",
+        "Phone": "(718) 574-1605"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.91797369999999,
+          40.6980614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 84,
+        "Name": "84",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "301 Gold Street",
+        "Phone": "(718) 875-6811"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9830527,
+          40.6954912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 88,
+        "Name": "88",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "298 Classon Avenue",
+        "Phone": "(718) 636-6511"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96055799999999,
+          40.690066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 90,
+        "Name": "90",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "211 Union Avenue",
+        "Phone": "(718) 963-5311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9501382,
+          40.7061539
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 94,
+        "Name": "94",
+        "State": "NY",
+        "County": "Kings",
+        "City": "Brooklyn",
+        "Address": "100 Meserole Avenue",
+        "Phone": "(718) 383-3879"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.95295279999999,
+          40.7270017
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 100,
+        "Name": "100",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "92-24 Rockaway Beach Boulevard",
+        "Phone": "(718) 318-4200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8590847,
+          40.5714753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 101,
+        "Name": "101",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "16-12 Mott Avenue",
+        "Phone": "(718) 868-3400"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.74999799999999,
+          40.6029559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 102,
+        "Name": "102",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "87-34 118th Street",
+        "Phone": "(718) 805-3200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8312832,
+          40.6987131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 103,
+        "Name": "103",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Jamaica",
+        "Address": "168-02 91st Ave.",
+        "Phone": "(718) 657-8181"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7924809,
+          40.7069638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 104,
+        "Name": "104",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "64-2 Catalpa Avenue",
+        "Phone": "(718) 386-3004"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.893644,
+          40.7044548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 105,
+        "Name": "105",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "92-08 222nd Street",
+        "Phone": "(718) 776-9090"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7347765,
+          40.72623470000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 106,
+        "Name": "106",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "103-53 101st Street",
+        "Phone": "(718) 845-2211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.839665,
+          40.68215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 107,
+        "Name": "107",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "71-01 Parsons Boulevard",
+        "Phone": "(718) 969-5100"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.81064289999999,
+          40.7301379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 108,
+        "Name": "108",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "5-47 50th Avenue",
+        "Phone": "(718) 784-5411"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9546953,
+          40.7430786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 109,
+        "Name": "109",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "37-05 Union Street",
+        "Phone": "(718) 321-2250"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.82743669999999,
+          40.7623039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 110,
+        "Name": "110",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "94-41 43rd Avenue",
+        "Phone": "(718) 476-9311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.8700027,
+          40.7450401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 111,
+        "Name": "111",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "42-06 215th Street",
+        "Phone": "(718) 279-5200"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.7682031,
+          40.762835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 112,
+        "Name": "112",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "68-40 Austin Street",
+        "Phone": "(718) 520-9311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.851468,
+          40.722358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 113,
+        "Name": "113",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "167-02 Baisley Boulevard",
+        "Phone": "(718) 712-7733"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.776003,
+          40.67972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 114,
+        "Name": "114",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "34-16 Astoria Boulevard",
+        "Phone": "(718) 626-9311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.915487,
+          40.769281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 115,
+        "Name": "115",
+        "State": "NY",
+        "County": "Queens",
+        "City": "Queens",
+        "Address": "92-15 Northern Boulevard",
+        "Phone": "(718) 533-2002"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.87552310000001,
+          40.7568128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 120,
+        "Name": "120",
+        "State": "NY",
+        "County": "Richmond",
+        "City": "Staten Island",
+        "Address": "78 Richmond Terrace",
+        "Phone": "(718) 876-8500"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0773058,
+          40.6447137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 121,
+        "Name": "121",
+        "State": "NY",
+        "County": "Richmond",
+        "City": "Staten Island",
+        "Address": "970 Richmond Avenue",
+        "Phone": "(718) 697-8700"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1491992,
+          40.6236077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 122,
+        "Name": "122",
+        "State": "NY",
+        "County": "Richmond",
+        "City": "Staten Island",
+        "Address": "2320 Hylan Boulevard",
+        "Phone": "(718) 667-2211"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.1057515,
+          40.5743162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "Number": 123,
+        "Name": "123",
+        "State": "NY",
+        "County": "Richmond",
+        "City": "Staten Island",
+        "Address": "116 Main Street",
+        "Phone": "(718) 948-9311"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.25003,
+          40.511799
+        ]
+      }
+    }
+  ]
+}

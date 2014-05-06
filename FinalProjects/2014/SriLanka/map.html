@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title></title>
+
+    <!-- MapBox and Leaflet -->
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
+    <!-- jQuery Libraries -->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+    <!-- D3 Project Libraries -->
+
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="./d3.bspGeoJson.js"></script>
+    <link rel="stylesheet" type="text/css" href="./d3.bspGeoJson.css">
+
+    <style type="text/css">
+        html {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            background-color: #eee;
+            padding: 0px;
+            font: 14px , Garamond, Helvetica, sans-serif;
+            margin-right: auto;
+            margin-left: auto;
+            width: 960px;
+            height: 100%;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            color: #00B7FF;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        #title {
+            height: 75px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #visualizations {
+            float: left;
+            height: 650px;
+            width: 40%;
+            max-width: 
+
+        }
+
+        #controls {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #map {
+            width: 60%;
+            height: 650px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .spacer {
+            height: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h1>Visualizing Damage and Displacement in Sri Lanka<br/>After the 2004 Indian Ocean Tsunami</h1>
+    </div>
+    <div id="visualizations">
+        <div id="story">
+            From <a href="http://en.wikipedia.org/wiki/Effect_of_the_2004_Indian_Ocean_earthquake_on_Sri_Lanka">Wikipedia </a>
+            <blockquote>
+                As of 16:35 GST 3 January 2005, Sri Lankan authorities report 30,196 
+                confirmed deaths[1] after the island was hit by the tsunami resulting 
+                from the 2004 Indian Ocean earthquake on December 26, 2004. Many of the 
+                ead were adults and the elderly. The south and east coasts were worst 
+                hit. One and a half million people have been displaced from their homes. 
+                The death toll continues to rise as the threat of infectious diseases 
+                breaking out has turned into a fact, with doctors confirming first cases 
+                of cholera.
+            </blockquote>
+        </div>
+        <div id="controls">
+            Level of Detail:
+            <span id="levelOfDetail">
+                <input type="radio" id="auto" name="levelOfDetail" checked="checked"><label for="auto">Auto</label>
+                <input type="radio" id="prov" name="levelOfDetail"><label for="prov">Province</label>
+                <input type="radio" id="dist" name="levelOfDetail"><label for="dist">District</label>
+            </span>
+            <div class="spacer"></div>
+            <input id="runup" type="checkbox" checked="checked"><label for="runup">Include Tsunami Run-Up Data</label>
+            <div class="spacer"></div>
+            <span>
+                <select id="variable1">
+                    <option value="NHDestroyedPct" selected="selected">Non-Housing Destroyed (%)</option>
+                    <option value="NHMajorDamagePct">Non-Housing Major Damage (%)</option>
+                    <option value="NHMinorDamagePct">Non-Housing Minor Damage (%)</option>
+                    <option value="NHNoDamagePct">Non-Housing No Damage (%)</option>
+                    <option value="PeopleLivingAfterInsidePct">People Living After Inside (%)</option>
+                    <option value="PeopleLivingAfterOutsidePct">People Living After Outside (%)</option>
+                    <option value="HDestroyedPct">Housing Destroyed (%)</option>
+                    <option value="HMajorDamagePct">Housing Major Damage (%)</option>
+                    <option value="HMinorDamagePct">Housing Minor Damage (%)</option>
+                    <option value="HNoDamagePct">Housing No Damage (%)</option>
+                <select>
+                <div class="spacer"></div>vs<div class="spacer"></div>
+                <select id="variable2">
+                    <option value="NHDestroyedPct">Non-Housing Destroyed (%)</option>
+                    <option value="NHMajorDamagePct">Non-Housing Major Damage (%)</option>
+                    <option value="NHMinorDamagePct">Non-Housing Minor Damage (%)</option>
+                    <option value="NHNoDamagePct">Non-Housing No Damage (%)</option>
+                    <option value="PeopleLivingAfterInsidePct" selected="selected">People Living After Inside (%)</option>
+                    <option value="PeopleLivingAfterOutsidePct">People Living After Outside (%)</option>
+                    <option value="HDestroyedPct">Housing Destroyed (%)</option>
+                    <option value="HMajorDamagePct">Housing Major Damage (%)</option>
+                    <option value="HMinorDamagePct">Housing Minor Damage (%)</option>
+                    <option value="HNoDamagePct">Housing No Damage (%)</option>
+                </select>
+            </span>
+            <div id="bspProv"></div>
+            <div id="bspDist"></div>
+        </div>
+    </div>
+    <div id="map"></div>
+
+    <script type="text/javascript">
+
+        var bspProv,
+            bspDist,
+            fgrpAdmin0,
+            fgrpAdmin1,
+            fmapAdmin0 = [],
+            fmapAdmin1 = [],
+            grpRunup = L.featureGroup(),
+            isFeatureSelected = null,
+            map = L.mapbox.map("map", "njs5135.hok0hak3", {
+                'maxZoom' : 12,
+                'minZoom' : 6,
+                'zoom' : 8,
+                'center' : L.latLng(7.738, 80.612)
+            });
+
+        map.on('ready', function () { loadDataLayers(); });
+
+        $('#variable1').change(updateColors);
+        $('#variable2').change(updateColors);
+        $("input[name=levelOfDetail]:radio").change(function () { 
+
+            if ($("input[id=auto]:checked").length > 0) {
+
+                if (map.getZoom() < 10) {
+                    $("#bspProv").css('display', 'block');
+                    $("#bspDist").css('display', 'none');
+                } else {
+                    $("#bspProv").css('display', 'none');
+                    $("#bspDist").css('display', 'block');
+                }
+
+                map.on('zoomend', swapLayersOnZoom)
+            } else {
+                map.off('zoomend', swapLayersOnZoom)
+            }
+
+            if ($("input[id=prov]:checked").length > 0) {
+                if (map.hasLayer(fgrpAdmin1)) { map.removeLayer(fgrpAdmin1); }
+                map.addLayer(fgrpAdmin0);
+                $("#bspProv").css('display', 'block');
+                $("#bspDist").css('display', 'none');
+            } 
+
+            if ($("input[id=dist]:checked").length > 0) {
+                if (map.hasLayer(fgrpAdmin0)) { map.removeLayer(fgrpAdmin0); }
+                map.addLayer(fgrpAdmin1);
+                $("#bspProv").css('display', 'none');
+                $("#bspDist").css('display', 'block');
+            } 
+
+            updateColors();
+            grpRunup.bringToFront();
+        });
+
+        $("#runup").change(function () {
+            if ($("#runup").prop("checked")) {
+                map.addLayer(grpRunup)
+            } else {
+                map.removeLayer(grpRunup)
+            }
+        })
+
+        // ---- Loading Data ----
+
+        function loadDataLayers () {
+            queue(2)
+                .defer(loadDataLayer, './data/SriLanka.Admin0.json')
+                .defer(loadDataLayer, './data/SriLanka.Admin1.json')
+                .defer(loadDataLayer, './data/SriLanka.Runup.json')
+                .await(function (error, admin0, admin1, runup) {
+                    if (error) { console.error(error); return; }
+
+                    fgrpAdmin0 = L.geoJson(admin0, {
+                        'style' : styleAdminAreas,
+                        'onEachFeature' : function (feature, layer) {
+                            
+                            layer.on("click", function () {
+                                linker(feature, feature.type, 'click');
+                            });
+                            
+                            fmapAdmin0.push({'feature':feature, 'layer':layer})
+                        }
+                    })
+
+                    fgrpAdmin1 = L.geoJson(admin1, {
+                        'style' : styleAdminAreas,
+                        'onEachFeature' : function (feature, layer) {
+                            
+                            layer.on("click", function () {
+                                linker(feature, feature.type, 'click');
+                            });
+
+                            fmapAdmin1.push({'feature':feature, 'layer':layer})   
+                        }
+                    })
+
+                    map
+                        .addLayer(fgrpAdmin0)
+                        .on('zoomend', swapLayersOnZoom);
+
+                    bspProv = d3.bspGeoJson(admin0, {
+                        'id' : 'bspProv',
+                        'var1' : $('#variable1').val(),
+                        'var2' : $('#variable2').val(),
+                        'classifier' : classifier,
+                        'colorizer' : colorizer,
+                        'width' : 270,
+                        'height' : 270,
+                        'domainx' : "max",
+                        'domainy' : "max",
+                        'name1' : $('#variable1 option[value=' + $('#variable1').val() + ']').text(),
+                        'name2' : $('#variable2 option[value=' + $('#variable2').val() + ']').text(),
+                        'linker' : linker
+                    });
+
+                    bspDist = d3.bspGeoJson(admin1, {
+                        'id' : 'bspDist',
+                        'var1' : $('#variable1').val(),
+                        'var2' : $('#variable2').val(),
+                        'classifier' : classifier,
+                        'colorizer' : colorizer,
+                        'width' : 270,
+                        'height' : 270,
+                        'domainx' : "max",
+                        'domainy' : "max",
+                        'name1' : $('#variable1 option[value=' + $('#variable1').val() + ']').text(),
+                        'name2' : $('#variable2 option[value=' + $('#variable2').val() + ']').text(),
+                        'linker' : linker
+                    });
+
+                    d3.csv("./data/TsunamiRunupData.csv", function (error, data) {
+                        map.addLayer(grpRunup);
+
+                        console.log(data);
+
+                        data.forEach(function (datum) {
+                            console.log("I have a runup point");
+
+                            var marker = L.circleMarker([datum.Lat, datum.Lon], {
+                                'color' : "#fff",
+                                'opacity' : 1,
+                                'fillColor' : (function () {
+                                    if (datum.Type === "1") {
+                                        return "#66c2a5";
+                                    }
+
+                                    if (datum.Type === "4") {
+                                        return "#fc8d62";
+                                    }
+
+                                    if (datum.Type === "5") {
+                                        return "#8da0cb";
+                                    }
+
+                                    return "#fff";
+                                }()),
+                                'fillOpacity' : 0.7
+                            })
+
+                            marker.setRadius((datum.MaxWaterHeight ? +datum.MaxWaterHeight : 0))
+
+                            grpRunup.addLayer(marker);
+                        })
+                    });
+
+                    $("#bspProv").css('display', 'block');
+                    $("#bspDist").css('display', 'none');
+                });
+        }
+    
+        function loadDataLayer (url, callback) {
+            d3.json(url, function (error, data) {
+                callback(error, data);
+            });
+        }
+
+        function swapLayersOnZoom () {
+            if (map.getZoom() === 9) {
+                if (map.hasLayer(fgrpAdmin1)) { map.removeLayer(fgrpAdmin1); }
+                map.addLayer(fgrpAdmin0);
+                $("#bspProv").css('display', 'block');
+                $("#bspDist").css('display', 'none');
+            } 
+
+            if (map.getZoom() === 10) {
+                if (map.hasLayer(fgrpAdmin0)) { map.removeLayer(fgrpAdmin0); }
+                map.addLayer(fgrpAdmin1);
+                $("#bspProv").css('display', 'none');
+                $("#bspDist").css('display', 'block');
+            }
+        }
+
+        // ---- Styling Layers ----
+
+        function styleAdminAreas (feature) {
+            return {
+                'color' : "#fff",
+                'opacity' : 1,
+                'weight' : 2,
+                'fillColor' : getColor(feature),
+                'fillOpacity' : 0.7
+            };
+        }
+
+        function getColor (feature) {
+            
+            var attr1Name = $('#variable1').val();
+            var attr1Val = feature.properties[attr1Name];
+            var attr1Cls = classifier(attr1Name, attr1Val);
+
+            var attr2Name = $('#variable2').val();
+            var attr2Val = feature.properties[attr2Name];
+            var attr2Cls = classifier(attr2Name, attr2Val);
+
+            return colorizer(attr1Cls, attr2Cls);
+        }
+
+        function colorizer (cls1, cls2) {
+            if (cls1 === 1 && cls2 === 1) {
+                return "#ffffff";
+            } else if (cls1 === 2 && cls2 === 1) {
+                return "#bababa";
+            } else if (cls1 === 3 && cls2 === 1) {
+                return "#646464";
+            } else if (cls1 === 1 && cls2 === 2) {
+                return "#DE7D8D";
+            } else if (cls1 === 2 && cls2 === 2) {
+                return "#AE6573";
+            } else if (cls1 === 3 && cls2 === 2) {
+                return "#7C4B54";
+            } else if (cls1 === 1 && cls2 === 3) {
+                return "#C70929";
+            } else if (cls1 === 2 && cls2 === 3) {
+                return "#AE1C36";
+            } else if (cls1 === 3 && cls2 === 3) {
+                return "#943246";
+            } else {
+                return "#000";
+            }
+        }
+
+        function classifier (name, value) {
+            var cls; 
+
+            if (name === "NHDestroyedPct") {
+                if (value > 0.4251) {
+                    cls = 3;
+                } else if (value > 0.1026) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "NHMajorDamagePct") {
+                if (value > 0.0516) {
+                    cls = 3;
+                } else if (value > 0.0037) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "NHMinorDamagePct") {
+                if (value > 0.2169) {
+                    cls = 3;
+                } else if (value > 0.1491) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "NHNoDamagePct") {
+                if (value > 0.6927) {
+                    cls = 3;
+                } else if (value > 0.0390) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "PeopleLivingAfterInsidePct") {
+                if (value > 0.6868) {
+                    cls = 3;
+                } else if (value > 0.5821) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "PeopleLivingAfterOutsidePct") {
+                if (value > 0.2500) {
+                    cls = 3;
+                } else if (value > 0.0880) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "HDestroyedPct") {
+                if (value > 0.4251) {
+                    cls = 3;
+                } else if (value > 0.1026) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "HMajorDamagePct") {
+                if (value > 0.0936) {
+                    cls = 3;
+                } else if (value > 0.0519) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "HMinorDamagePct") {
+                if (value > 0.2501) {
+                    cls = 3;
+                } else if (value > 0.0933) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else if (name === "HNoDamagePct") {
+                if (value > 0.6162) {
+                    cls = 3;
+                } else if (value > 0.3376) {
+                    cls = 2;
+                } else {
+                    cls = 1;
+                }
+            } else {
+                cls = 0;
+            }
+
+            return cls;
+        }
+
+        function updateColors () {
+            for (var i = fmapAdmin0.length - 1; i >= 0; i--) {
+                fmap = fmapAdmin0[i];
+                fmap.layer.setStyle(styleAdminAreas(fmap.feature));
+            }
+
+            for (var i = fmapAdmin1.length - 1; i >= 0; i--) {
+                fmap = fmapAdmin1[i];
+                fmap.layer.setStyle(styleAdminAreas(fmap.feature));
+            }
+
+            bspProv.updateVariablesWithNames(
+                $('#variable1').val(),
+                $('#variable1 option[value=' + $('#variable1').val() + ']').text(), 
+                $('#variable2').val(),
+                $('#variable2 option[value=' + $('#variable2').val() + ']').text()
+            ); 
+
+            bspDist.updateVariablesWithNames(
+                $('#variable1').val(),
+                $('#variable1 option[value=' + $('#variable1').val() + ']').text(), 
+                $('#variable2').val(),
+                $('#variable2 option[value=' + $('#variable2').val() + ']').text()
+            ); 
+        }
+
+        // ---- Linker ----
+
+        function linker (feature, type, interaction) {
+            if (interaction === 'click') {
+
+                // ---- Adjust Map Feature Styles ----
+
+                for (var i = 0; i < fmapAdmin0.length; i++) {
+                    fmap = fmapAdmin0[i];
+
+                    if (fmap.feature === feature && fmap.feature !== isFeatureSelected) {
+                        fmap.layer.setStyle({'fillColor':'#ffeda0'});
+                    } else {
+                        fmap.layer.setStyle(styleAdminAreas(fmap.feature));
+                    }
+                }
+
+                for (var i = 0; i < fmapAdmin1.length; i++) {
+                    fmap = fmapAdmin1[i];
+
+                    if (fmap.feature === feature && fmap.feature !== isFeatureSelected) {
+                        fmap.layer.setStyle({'fillColor':'#ffeda0'});
+                    } else {
+                        fmap.layer.setStyle(styleAdminAreas(fmap.feature));
+                    }
+                }
+
+                // ---- Adjusting PCP Styles ----
+
+                bspProv.dots.classed("selected", function (datum, index) {
+                    return (datum === feature && datum !== isFeatureSelected);
+                });
+
+                bspDist.dots.classed("selected", function (datum, index) {
+                    return (datum === feature && datum !== isFeatureSelected);
+                });
+
+                // ---- Capturing the Selected Feature ----
+
+                if (isFeatureSelected === feature) { 
+                  isFeatureSelected = null; 
+                } else {
+                  isFeatureSelected = feature;
+                }
+
+            }
+        }
+
+    </script>
+</body>
+</html>

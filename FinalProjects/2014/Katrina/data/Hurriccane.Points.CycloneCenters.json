@@ -1,0 +1,583 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.1,
+          23.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 23,
+        "time": 1800,
+        "stage": "tropical depression",
+        "windSpeed": 30,
+        "pressure": 1008
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.7,
+          23.4
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 24,
+        "time": 0,
+        "stage": "tropical depression",
+        "windSpeed": 30,
+        "pressure": 1007
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.2,
+          23.8
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 24,
+        "time": 600,
+        "stage": "tropical depression",
+        "windSpeed": 30,
+        "pressure": 1007
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.5,
+          24.5
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 24,
+        "time": 1200,
+        "stage": "tropical storm",
+        "windSpeed": 35,
+        "pressure": 1006
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.9,
+          25.4
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 24,
+        "time": 1800,
+        "stage": "tropical storm",
+        "windSpeed": 40,
+        "pressure": 1003
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.7,
+          26
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 25,
+        "time": 0,
+        "stage": "tropical storm",
+        "windSpeed": 45,
+        "pressure": 1000
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.4,
+          26.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 25,
+        "time": 600,
+        "stage": "tropical storm",
+        "windSpeed": 50,
+        "pressure": 997
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79,
+          26.2
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 25,
+        "time": 1200,
+        "stage": "tropical storm",
+        "windSpeed": 55,
+        "pressure": 994
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.6,
+          26.2
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 25,
+        "time": 1800,
+        "stage": "tropical storm",
+        "windSpeed": 60,
+        "pressure": 988
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.3,
+          25.9
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 26,
+        "time": 0,
+        "stage": "hurricane",
+        "windSpeed": 70,
+        "pressure": 983
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.3,
+          25.4
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 26,
+        "time": 600,
+        "stage": "hurricane",
+        "windSpeed": 65,
+        "pressure": 987
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82,
+          25.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 26,
+        "time": 1200,
+        "stage": "hurricane",
+        "windSpeed": 75,
+        "pressure": 979,
+        "desc" : "<ul><li>National Hurricane Center shifts possible track of Katrina to the Mississippi/Louisiana coast</li><li>Governor Blanco declares state of emergency for Louisiana</li><li>Results in 922 Army National Guard and 8 Air National Guard deployed to Louisiana</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.6,
+          24.9
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 26,
+        "time": 1800,
+        "stage": "hurricane",
+        "windSpeed": 85,
+        "pressure": 968,
+        "desc" : "<ul><li>National Hurricane Center shifts possible track of Katrina to the Mississippi/Louisiana coast</li><li>Governor Blanco declares state of emergency for Louisiana</li><li>Results in 922 Army National Guard and 8 Air National Guard deployed to Louisiana</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.3,
+          24.6
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 27,
+        "time": 0,
+        "stage": "hurricane",
+        "windSpeed": 90,
+        "pressure": 959,
+        "desc" : "<ul><li>National Hurricane Center shifts possible track of Katrina to the Mississippi/Louisiana coast</li><li>Governor Blanco declares state of emergency for Louisiana</li><li>Results in 922 Army National Guard and 8 Air National Guard deployed to Louisiana</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84,
+          24.4
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 27,
+        "time": 600,
+        "stage": "hurricane",
+        "windSpeed": 95,
+        "pressure": 950,
+        "desc" : "<ul><li>St. Charles Parish, St. Tammany Parish, and Plaquemines Parish under mandatory evacuation</li><li>Mandatory evacuation of coastal areas of Grand Isle, Crown Point, Lafitte, and Barataria</li><li>Tolls suspended on Lake Pontchartrain Causeway and Crescent City Connection</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.7,
+          24.4
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 27,
+        "time": 1200,
+        "stage": "hurricane",
+        "windSpeed": 100,
+        "pressure": 942,
+        "desc" : "<ul><li>St. Charles Parish, St. Tammany Parish, and Plaquemines Parish under mandatory evacuation</li><li>Mandatory evacuation of coastal areas of Grand Isle, Crown Point, Lafitte, and Barataria</li><li>Tolls suspended on Lake Pontchartrain Causeway and Crescent City Connection</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.3,
+          24.5
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 27,
+        "time": 1800,
+        "stage": "hurricane",
+        "windSpeed": 100,
+        "pressure": 948,
+        "desc" : "<ul><li>New Orleans Mayor announces state of emergency and calls for volunteer evacuation (no mandatory evacuation until 30 hours before expected landfall)</li><li>President Bush declares federal state of emergency in Louisiana upon request</li><li>1701 Army National Guard and 932 Air National Guard deployed</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.9,
+          24.8
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 28,
+        "time": 0,
+        "stage": "hurricane",
+        "windSpeed": 100,
+        "pressure": 941,
+        "desc" : "<ul><li>New Orleans Mayor announces state of emergency and calls for volunteer evacuation (no mandatory evacuation until 30 hours before expected landfall)</li><li>President Bush declares federal state of emergency in Louisiana upon request</li><li>1701 Army National Guard and 932 Air National Guard deployed</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.7,
+          25.2
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 28,
+        "time": 600,
+        "stage": "hurricane",
+        "windSpeed": 125,
+        "pressure": 930,
+        "desc" : "Mayor of New Orleans declares 'mandatory evacuation for parish of Orleans'"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87.7,
+          25.7
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 28,
+        "time": 1200,
+        "stage": "hurricane",
+        "windSpeed": 145,
+        "pressure": 909,
+        "desc" : "Superdome opened as 'refuge of last resort' for residents unable to leave the city"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.6,
+          26.3
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 28,
+        "time": 1800,
+        "stage": "hurricane",
+        "windSpeed": 150,
+        "pressure": 902,
+        "desc" : "Superdome opened as 'refuge of last resort' for residents unable to leave the city"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2,
+          27.2
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 29,
+        "time": 0,
+        "stage": "hurricane",
+        "windSpeed": 140,
+        "pressure": 905,
+        "desc" : "Superdome opened as 'refuge of last resort' for residents unable to leave the city"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.6,
+          28.2
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 29,
+        "time": 600,
+        "stage": "hurricane",
+        "windSpeed": 125,
+        "pressure": 913,
+        "desc" : "<ul><li>National Weather Service issues flash flood warning for Orleans Parish and St. Bernard Parish due to levee breach at Industrial Canal (3-8 feet of water were predicted)</li><li>6&ndash;8ft of water in Lower Ninth Ward</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.6,
+          29.5
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 29,
+        "time": 1200,
+        "stage": "hurricane",
+        "windSpeed": 110,
+        "pressure": 923,
+        "desc" : "<ul><li>Approximately 10ft of water in St. Bernard Parish</li><li>New Orleans officials confirmed breach of 17th Street Canal levee</li><li>Two other confirmed levee breaches</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.6,
+          31.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 29,
+        "time": 1800,
+        "stage": "hurricane",
+        "windSpeed": 80,
+        "pressure": 948,
+        "desc" : "<ul><li>Press conference reveals officials are positive there have been casualties</li><li>Governor Blanco orders 68 school buses into New Orleans from surrounding parishes to begin evacuating any survivors remaining in the city</li><li>6908 Army National Guard and 933 Air National Guard deployed</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.1,
+          32.6
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 30,
+        "time": 0,
+        "stage": "tropical storm",
+        "windSpeed": 50,
+        "pressure": 961,
+        "desc" : "<ul><li>Press conference reveals officials are positive there have been casualties</li><li>Governor Blanco orders 68 school buses into New Orleans from surrounding parishes to begin evacuating any survivors remaining in the city</li><li>6908 Army National Guard and 933 Air National Guard deployed</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88.6,
+          34.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 30,
+        "time": 600,
+        "stage": "tropical storm",
+        "windSpeed": 40,
+        "pressure": 978,
+        "desc" : "<ul><li>Press conference reveals officials are positive there have been casualties</li><li>Governor Blanco orders 68 school buses into New Orleans from surrounding parishes to begin evacuating any survivors remaining in the city</li><li>6908 Army National Guard and 933 Air National Guard deployed</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -88,
+          35.6
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 30,
+        "time": 1200,
+        "stage": "tropical depression",
+        "windSpeed": 30,
+        "pressure": 985,
+        "desc" : "<ul><li>Homeland Security Secretary, Michael Chertoff, becomes aware that the New Orleans levee breaches could not be plugged</li><li>Governor Blanco orders all of New Orleans, including the Superdome, be evacuated due to flooding</li><li>Reported looting, even by police officers, forces Governor Blanco to request backup from federal troops to restore law and order in New Orleans</li><li>9668 Army National Guard and 956 Air National guard deployed</li><li>USCG helicopters rescue 350 people off roof tops</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -87,
+          37
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 30,
+        "time": 1800,
+        "stage": "tropical depression",
+        "windSpeed": 30,
+        "pressure": 990,
+        "desc" : "<ul><li>Homeland Security Secretary, Michael Chertoff, becomes aware that the New Orleans levee breaches could not be plugged</li><li>Governor Blanco orders all of New Orleans, including the Superdome, be evacuated due to flooding</li><li>Reported looting, even by police officers, forces Governor Blanco to request backup from federal troops to restore law and order in New Orleans</li><li>9668 Army National Guard and 956 Air National guard deployed</li><li>USCG helicopters rescue 350 people off roof tops</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -85.3,
+          38.6
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 31,
+        "time": 0,
+        "stage": "extratropical",
+        "windSpeed": 30,
+        "pressure": 994,
+        "desc" : "<ul><li>Homeland Security Secretary, Michael Chertoff, becomes aware that the New Orleans levee breaches could not be plugged</li><li>Governor Blanco orders all of New Orleans, including the Superdome, be evacuated due to flooding</li><li>Reported looting, even by police officers, forces Governor Blanco to request backup from federal troops to restore law and order in New Orleans</li><li>9668 Army National Guard and 956 Air National guard deployed</li><li>USCG helicopters rescue 350 people off roof tops</li></ul>"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.9,
+          40.1
+        ]
+      },
+      "properties": {
+        "month": 8,
+        "day": 31,
+        "time": 600,
+        "stage": "extratropical",
+        "windSpeed": 25,
+        "pressure": 996,
+        "desc" : "<ul><li>Announced that the planned sandbagging of 17th Street Canal levee breach had failed</li><li>At this time 85% of New Orleans is under water</li></ul>"
+      }
+    }
+  ]
+}

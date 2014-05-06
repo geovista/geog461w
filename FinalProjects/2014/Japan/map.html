@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Final Project -- GEOG 461W">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    
+    <title>Geog 461W | Final Project | Japan Earthquake</title>
+    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="./d3.pcpGeoJson.js"></script>
+    <link href="./d3.pcpGeoJson.css" rel='stylesheet'/>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="http://personal.psu.edu/rsm5068/Geog461W_SP14/jquery.csv.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    
+    <link href='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.css' rel='stylesheet' />
+    <script type="text/javascript" src='http://api.tiles.mapbox.com/mapbox.js/v1.6.0/mapbox.js'></script>
+    
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+    <style type="text/css">
+        body {
+            padding: 0px;
+            font: 14px Helvetica, Arial, sans-serif;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        a {
+            color: #00B7FF;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        #map {
+            width: 60%;
+            float: left;
+            height: 600px;
+            vertical-align: middle;
+        }
+        
+        #author {
+            text-align: center;
+            font-family:"Constantia, 'Palatino Linotype', Palatino, Georgia, serif";
+            font-size: 17px;
+        }
+        
+        #container {
+            width: 80%;
+            margin-left:auto;
+            margin-right:auto;
+        }
+       
+        .controls {
+            text-align: center;
+            padding: 0.5em;   
+        }
+        
+        #infobox {
+            width: 39% ;
+            margin-right:auto;
+            float: right;
+        }
+        
+        #infoTitle {
+            text-align: center;
+            font-family: "Constantia, 'Palatino Linotype', Palatino, Georgia, serif";
+            font-size: 25px;
+            font-weight:bold;
+        }
+        
+        #infoTable {
+            padding: 12px;
+            font-family: Cambria, Georgia, serif;
+            font-size: 15px;
+        }
+        
+        td {
+            Width: 300px;
+            Height: 22px;
+        }
+
+    </style>
+</head>
+<body>
+  <div id ="container">
+    <br>
+    <h1>Visualizing Population Changes from the 2011 Tōhoku Earthquake and Tsunami</h1>
+    <p id="author"><b>Matthew Brothers, Pat Dougherty, Yiting Ju</b><br><br></p>
+    <div>
+        <div id="map"></div>
+        <div id="infobox">
+            <div id="intro">
+                <!-- Add intro to app here -->
+            </div>
+            <div id="infoTitle"></div>
+            <br>
+            <div id="infoTable" >
+                <table>
+                <tr>
+                    <td>Death</td>
+                    <td><div id="death"></div></td>
+                </tr> 
+                <tr>
+                    <td>Missing</td>
+                    <td><div id="missing"></div></td>
+                </tr> 
+                <tr>
+                    <td>Population</td>
+                    <td><div id="population"></div></td>
+                </tr> 
+                <tr>
+                    <td>Pop. Density</td>
+                    <td><div id="popDensity"></div></td>
+                </tr>
+                <tr>
+                    <td>Population Before Earthquake</td>
+                    <td><div id="populationBE"></div></td>
+                </tr> 
+                <tr>
+                    <td>Pop. Density Before Earthquake</td>
+                    <td><div id="popDensityBE"></div></td>
+                </tr>
+                <tr>
+                    <td>Population Change</td>
+                    <td><div id="popChange"></div></td>
+                </tr> 
+                <tr>
+                    <td>Pop. Density Change</td>
+                    <td><div id="popDensityChange"></div></td>
+                </tr> 
+
+                </table>
+            </div>
+            <br>
+            <br>
+            <input type="radio" name="pcpSelect" id="prefectures" checked="checked"><label for="prefectures">Compare Prefectures</label>
+            <input type="radio" name="pcpSelect" id="cities"><label for="cities">Compare Cities</label>
+            <br><br><br><img src="legend.JPG" height="60" width="180">
+        </div>
+        <div id="pcpPrefectures"></div>
+        <div id="pcpCities" style="display: none;"></div>
+    </div>
+    <script type="text/javascript">
+    
+        var map = L.mapbox.map('map','romaboy.ti221emi',{maxZoom:10, minZoom:4});
+        //var map = L.mapbox.map('map','romaboy.h612fjkk',{maxZoom:10, minZoom:4});
+        var earthquakePointMarkerCounter = 0;
+        var lyrEpicenter;
+        var lyrPrefectures;
+        var lyrCities;
+        var pcpPrefectures;
+        var pcpCities;
+        var fmapPrefectures = [];
+        var fmapCities = [];
+        var selectedFeature = null;
+                
+        map
+            .setView(L.latLng(38,139), 6)
+            .setMaxBounds(L.latLngBounds(L.latLng(26,120), L.latLng(51,160)));
+
+        $("#prefectures").click(function () { changeOutPCP(); });
+        $("#cities").click(function () { changeOutPCP(); });
+
+        function changeOutPCP () {
+            if ($("input[id=prefectures]:checked").length > 0) {
+                $("#pcpCities").css("display", "none");
+                $("#pcpPrefectures").css("display", "inline");
+            } else {
+                $("#pcpCities").css("display", "inline");
+                $("#pcpPrefectures").css("display", "none");
+            }
+        }
+        
+
+        queue(2)
+            .defer(loadDataLayer, './data/prefectures.json')
+            .defer(loadDataLayer, './data/cities.json')
+            .await(function (error, prefectures, cities) {
+                if (error) { return console.warn(error); }
+
+                // ---- Prefectures ----
+
+                lyrPrefectures = L.geoJson(prefectures, {
+                    'style' : stylePolys,
+                    'onEachFeature' : function (feature, layer) {
+                        layer.on('click', function () {
+                            linker(feature, feature.type, "click");
+                        })
+
+                        fmapPrefectures.push({'feature':feature, 'layer':layer});
+                    }
+                });
+                
+                pcpPrefectures = d3.pcpGeoJson(prefectures, {
+                    'id' : 'pcpPrefectures',
+                    'linker' : linker,
+                    'keys' : ["Deaths","Missing","Population","PopulationBefore","PopulationChange","MaxWaveHeight","MaxInundationDistance","HousesDestroyedNum","HousesDamangedNum"],
+                    'height' : 250,
+                });
+
+                // ---- Cities ----
+
+                lyrCities = L.geoJson(cities, {
+                    'pointToLayer' : function (feature, point) {
+                        var marker = L.circleMarker(point, {
+                            'color' : '#F7FE2E',
+                            'opacity' : 1.0,
+                            'fillColor' : '#F7FE2E',
+                            'fillOpacity' : 0.75
+                        });
+
+                        marker
+                            .setRadius(2)
+                            .on('click', function () {
+                                linker(feature, feature.type, "click");
+                            })
+                            .on('mouseover',function(e){
+                                infoTitle.innerHTML = feature.properties.City + ", " + feature.properties.Prefecture;
+                                //prefecture.innerHTML = feature.properties.Prefecture;
+                                //coordinates.innerHTML = feature.geometry.coordinates[1] + "&#176N, " + feature.geometry.coordinates[0] +"&#176E";
+                                population.innerHTML = feature.properties.Population;
+                                popDensity.innerHTML = feature.properties.PopulationDensitySKm + "/km<sup>2</sup>";
+                                death.innerHTML = feature.properties.Deaths;
+                                missing.innerHTML = feature.properties.Missing;
+                                populationBE.innerHTML = feature.properties.PopulationBefore;
+                                popDensityBE.innerHTML = feature.properties.PopDensityBefore;
+                                popChange.innerHTML = feature.properties.PopulationChange;
+                                popDensityChange.innerHTML = feature.properties.PopDensityChange;
+                                //infoTable.innerHTML = "<tr><td>Prefecture</td><td>"+earthquakePoint.Prefecture+"</td></tr><tr><td>Coordinates</td><td>"+earthquakePoint.Latitude+", "+earthquakePoint.Longitude+"</td></tr>";
+                            });
+
+                        return marker;
+                    },
+                    'onEachFeature' : function (feature, layer) {
+                        fmapCities.push({'feature':feature, 'layer':layer});
+                    }
+                });
+
+                pcpCities = d3.pcpGeoJson(cities, {
+                    'id' : 'pcpCities',
+                    'linker' : linker,
+                    'keys' : ["Deaths","Missing","Population","PopulationDensitySKm","PopulationBefore","PopDensityBefore","PopulationChange","PopDensityChange"],
+                    'height' : 250,
+                });
+
+                // ---- Epicenter ----
+
+                lyrEpicenter = L.circle([38.3220000, 142.3690000], 200, {color: '#CC00CC'});
+                var epicenterIcon = L.icon({
+                    iconUrl: 'epicenter.png',
+                    
+                    iconSize: [30, 30],
+                    iconAnchor: [0, 0]
+                });
+                lyrEpicenter = L.marker([38.3220000, 142.3690000],{icon: epicenterIcon});
+                
+                // ---- Nuclear Power Plants ----
+                NuclearPowerPlant1 = L.circle([37.4230, 141.0329], 200, {color: '#CC00CC'});
+                var earthquakeIcon = L.icon({
+                    iconUrl: 'radiationsymbol.jpg',
+                    
+                    iconSize: [20, 20],
+                    iconAnchor: [5, 5]
+                });
+                //NuclearPowerPlant1 = L.marker([37.4230, 141.0329],{icon: earthquakeIcon});
+                
+                map
+                    .addLayer(lyrPrefectures)
+                    .addLayer(lyrCities)
+                    .addLayer(lyrEpicenter)
+                    .addLayer(NuclearPowerPlant1);
+            });
+
+        map.on('zoomend', function() {
+            if (map.getZoom() === 4) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(0.5);
+                });
+            } 
+            
+            if (map.getZoom() === 5) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(1);
+                });
+            } 
+            
+            if (map.getZoom() === 6) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(2);
+                });
+            } 
+            
+            if (map.getZoom() === 7) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(3);
+                });
+            } 
+            
+            if (map.getZoom() === 8) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(6);
+                });
+            } 
+
+            if (map.getZoom() === 9) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(10);
+                });
+            } 
+            
+            if (map.getZoom() === 10) {
+                lyrCities.eachLayer(function (layer) {
+                    layer.setRadius(14);
+                });
+            } 
+        });
+        
+        // ---- Linker Functions ----
+
+        function linker (datum, dataType, interaction) {
+            if (dataType === 'Feature') { linkFeature(datum,interaction); }
+        }
+
+        function linkFeature (feature, interaction) {
+
+          if (interaction === 'click') {
+
+            // ---- Prefectures ----
+
+            // ---- Adjust Map Feature Styles ----
+
+            fmapPrefectures.forEach(function (fmap) {
+                
+                console.log(fmap.feature === feature && fmap.feature !== selectedFeature)
+
+                if (fmap.feature === feature && fmap.feature !== selectedFeature) {
+                    fmap.layer.setStyle({'fillColor':'#AEB404'});
+                    $("#pcpCities").css("display", "none");
+                    $("#pcpPrefectures").css("display", "inline");
+                    $("#prefectures").prop("checked", true);
+                    $("#cities").prop("checked", false);
+                } else {
+                    fmap.layer.setStyle(stylePolys(fmap.feature));
+                }
+            });
+
+            // ---- Adjusting PCP Styles ----
+
+            pcpPrefectures.lines.style("stroke", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return "#FFBF00";
+                } else {
+                    return "#3ADF00";
+                }
+            })
+            
+            pcpPrefectures.lines.style("stroke-width", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return 3;
+                } else {
+                    return 1.8;
+                }
+            })
+            
+            pcpPrefectures.lines.style("stroke-opacity", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return 1;
+                } else {
+                    return .7;
+                }
+            })
+            
+            // ---- Cities ----
+
+            // ---- Adjust Map Feature Styles ----
+
+            fmapCities.forEach(function (fmap) {
+                if (fmap.feature === feature && fmap.feature !== selectedFeature) {
+                    fmap.layer.setStyle({'fillColor':'#FF8000'});
+                    $("#pcpCities").css("display", "inline");
+                    $("#pcpPrefectures").css("display", "none");
+                    $("#prefectures").prop("checked", false);
+                    $("#cities").prop("checked", true);
+                } else {
+                    fmap.layer.setStyle(styleCities(fmap.feature));
+                }
+            });
+
+            // ---- Adjusting PCP Styles ----
+
+            pcpCities.lines.style("stroke", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return "#FFBF00";
+                } else {
+                    return "#3ADF00";
+                }
+            })
+            
+            pcpCities.lines.style("stroke-width", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return 3;
+                } else {
+                    return 1.8;
+                }
+            })
+            
+            pcpCities.lines.style("stroke-opacity", function (datum, index) {
+                if (datum === feature && datum !== selectedFeature) {
+                    return 1;
+                } else {
+                    return .7;
+                }
+            })
+
+            // ---- Capturing the Selected Feature ----
+
+            if (selectedFeature === feature) { 
+              selectedFeature = null; 
+            } else {
+              selectedFeature = feature;
+            }
+
+          }
+
+        }
+        
+        // ---- Styling Features on the Map ----
+
+        function stylePolys (feature) {
+          return {
+            'color': '#594',
+            'opacity' : 1,
+            'weight' : 0.5,
+            'fillOpacity' : 0.2,
+            'fillColor' : '#ae8'
+          };
+        }
+
+        function styleCities (feature) {
+            return {
+                'color' : '#F7FE2E',
+                'opacity' : 1.0,
+                'fillColor' : '#F7FE2E',
+                'fillOpacity' : 0.75
+            }
+        }
+
+        // ---- Utility Functions ----
+
+        function loadDataLayer (url, callback) {
+            d3.json(url, function (error, data) {
+                callback(error, data);
+            });
+        }
+
+    </script>
+  </div>
+</body>
+</html>

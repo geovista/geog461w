@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "BoroCode": 5, "BoroName": "Staten Island", "Shape_Leng": 330454.806607, "Shape_Area": 1623846991.529999971389771 }, "geometry": { "type": "Point", "coordinates": [ -74.153398052210306, 40.580846729748401 ] } },
+{ "type": "Feature", "properties": { "BoroCode": 1, "BoroName": "Manhattan", "Shape_Leng": 357176.13258, "Shape_Area": 636397842.672000050544739 }, "geometry": { "type": "Point", "coordinates": [ -73.967191326599021, 40.777251932049083 ] } },
+{ "type": "Feature", "properties": { "BoroCode": 2, "BoroName": "Bronx", "Shape_Leng": 464475.067699, "Shape_Area": 1186823812.599999904632568 }, "geometry": { "type": "Point", "coordinates": [ -73.866529764809243, 40.852618748382923 ] } },
+{ "type": "Feature", "properties": { "BoroCode": 3, "BoroName": "Brooklyn", "Shape_Leng": 742297.8304, "Shape_Area": 1937844335.480000019073486 }, "geometry": { "type": "Point", "coordinates": [ -73.947670083285814, 40.644719448485795 ] } },
+{ "type": "Feature", "properties": { "BoroCode": 4, "BoroName": "Queens", "Shape_Leng": 874225.139404, "Shape_Area": 3048478676.510000228881836 }, "geometry": { "type": "Point", "coordinates": [ -73.818467567275178, 40.707470126821455 ] } }
+]
+}

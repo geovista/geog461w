@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+<head>
+
+    <!-- Metadata -->
+
+
+
+    <!-- Leaflet and MapBox Libraries -->
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
+    <!-- jQuery Libraries -->
+
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
+
+    <!-- D3 Project Libraries -->
+
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+
+    <!-- Custom Styling -->
+
+    <style type="text/css">
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .colorblock {
+            width: 20px;
+            height: 20px;
+        }
+
+        .layerControlImg {
+            max-width: 20px;
+            max-height: 20px;
+        }
+
+        .legend-title {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: bold;
+            width: 150px;
+            font-size: 10pt;
+            text-align: center;
+        }
+
+        .legend-subtitle {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-weight: bold;
+            width: 150px;
+            font-size: 9pt;
+            text-align: center;
+        }
+
+        .PuBuGn32 {
+            fill: #a6bddb;
+        }
+
+        .PuBuGn33 {
+            fill: #1c9099;
+        }
+
+        .titleBar {
+            position: absolute;
+            color: #fff;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 75px;
+        }
+
+        .titleBar .left {
+            float: left;
+            padding-left: 15px;
+        }
+
+        .titleBar .right {
+            float: right;
+            padding-right: 15px;
+        }
+
+        .timeSlider {
+            position: absolute;
+            top: 725px;
+            left: 0px;
+            width: 100%;
+        }
+
+        #legend {
+            border: 1px solid black;
+            background-color: #fff;
+            position: absolute;
+            left: 5px;
+            top: 420px;
+            width: 150px;
+            height: 300px;
+            font-size: 8pt;
+        }
+
+        #legend table {
+            height: 190px;
+            width: 150px;
+            margin-left: 5px;
+        }
+
+        #legend td .symbol {
+            display: block;
+            margin: auto;
+            text-align: center;
+            vertical-align: middle;
+            width: 32px;
+            height: 32px;
+        }
+
+        #legend td .label {
+            width: 90px;
+        }
+
+        #legend ul.evac-labels {
+            position: absolute;
+            right: 30px;
+            margin: 0;
+            padding: 0;
+            float: right;
+            list-style: none;
+        }
+
+        #legend ul.evac-labels li {
+            display: block;
+            float: left;
+            width: 15px;
+            margin-bottom: 6px;
+            text-align: center;
+            font-size: 80%;
+            list-style: none;
+        }
+
+        #legend ul.evac-labels li span {
+            display: block;
+            float: left;
+            height: 15px;
+            width: 15px;
+        }
+
+        #map {
+            position: absolute;
+            top: 75px;
+            left: 0px;
+            width: 100%;
+            height: 650px;
+        }
+
+        #satcomp {
+            position: absolute;
+            left: 5px;
+            top: 275px;
+            height: 20px;
+            text-align: center;
+            width: 140px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="titleBar">
+        <h1 class="left">Hurricane Sandy Emergency Management Response Map</h1>
+        <h4 class="right">Andrew Homka | John Shaner | Siddharth Pandey | Geography 461W</h4>
+    </div>
+    <div id="map"></div>
+    <div id="legend">
+        <div class="legend-title">Legend</div>
+        <table>
+            <tr>
+                <td class="symbol"><img class='layerControlImg' src='./img/evacCenterIcon.png' /></td>
+                <td class="label">Evacuation Centers</td>
+            </tr>
+            <tr>
+                <td class="symbol"><img class='layerControlImg' src='./img/fire.png' /></td>
+                <td class="label">Fire Stations</td>
+            </tr>
+            <tr>
+                <td class="symbol"><img class='layerControlImg' src='./img/police.png' /></td>
+                <td class="label">Police Precincts</td>
+            </tr>
+            <tr>
+                <td class="symbol"><img class='layerControlImg' src='./img/hospital.png' /></td>
+                <td class="label">Hospitals</td>
+            </tr>
+            <tr>
+                <td class="symbol">
+                    <svg width="30" height="30">
+                        <circle class="PuBuGn32" cx="15" cy="15" r="10"/>
+                    </svg>
+                </td>
+                <td class="label">Storm Surge (1m Depth)</td>
+            </tr>
+            <tr>
+                <td class="symbol">
+                    <svg width="30" height="30">
+                        <circle class="PuBuGn33" cx="15" cy="15" r="10"/>
+                    </svg>
+                </td>
+                <td class="label">Storm Surge (3m Depth)</td>
+            </tr>
+        </table>
+        <div>
+            <div class="legend-subtitle">Evacuation Zones</div>
+            <ul class='evac-labels'>
+                <li><span style='background:#feedde;'></span>6</li>
+                <li><span style='background:#fdd0a2;'></span>5</li>
+                <li><span style='background:#fdae6b;'></span>4</li>
+                <li><span style='background:#fd8d3c;'></span>3</li>
+                <li><span style='background:#e6550d;'></span>2</li>
+                <li><span style='background:#a63603;'></span>1</li>
+            </ul>
+        </div>
+        <div id="satcomp">
+            <input id="satcompchk" type="checkbox" disabled="disabled">
+            <label for="satcompchk">Compare Imagery</label>
+        </div>
+    </div>
+    <input id="slider" class="timeSlider" type="range" min="0" max="1.0" step="any" />
+    <div>
+
+    </div>
+    <script type="text/javascript">
+
+        var map = null,
+            layerControl,
+            layerStreets,
+            layerSatelliteNow,
+            layerSatelliteThen,
+            layer1MSurge,
+            layer3MSurge,
+            fgrpEvacCenters,
+            fgrpFireStations,
+            fgrpHospitals,
+            fgrpPolice,
+            fgrpEvacZones;
+
+        map = L.mapbox.map("map", "sxp5180.hnmj19pn", {
+            'center' : L.latLng(40.7127, -74.0059),
+            'zoom' : 10,
+            'minZoom' : 9,
+            'maxZoom' : 16
+        })
+
+        map.infoControl.addInfo("<a target='_blank' href='http://storms.ngs.noaa.gov/storms/sandy/'>NOAA Hurricane Sandy Response Imagery</a>");
+        map.infoControl.addInfo("<a target='_blank' href='http://fema.maps.arcgis.com/home/item.html?id=307dd522499d4a44a33d7296a5da5ea0'>FEMA MOTF Hurricane Sandy Impact Analysis</a>");
+        map.infoControl.addInfo("<a target='_blank' href='https://nycopendata.socrata.com/'>NYC OpenData</a>");
+
+        function loadData (url, callback) {
+            $.get(url, function (data) {
+                callback(null, data);
+            })
+        }
+
+        queue(4)
+            .defer(loadData, 'data/NYC.Points.EvacCenters.json')
+            .defer(loadData, 'data/NYC.Points.FireStations.json')
+            .defer(loadData, 'data/NYC.Points.Hospitals.json')
+            .defer(loadData, 'data/NYC.Points.PolicePrecincts.json')
+            .defer(loadData, 'data/NYC.Polygons.EvacZones.json')
+            .await(function (error, ptsEvacCenters, ptsFireStations, ptsHospitals, ptsPolice, polysEvacZones) {
+                
+                // ---- Tile Layers ----
+
+                layerStreets = L.mapbox.tileLayer("sxp5180.hnmj19pn");
+                layerSatelliteNow = L.mapbox.tileLayer("ryanmullins.i0ag89ph");
+                layerSatelliteThen = L.mapbox.tileLayer("ryanmullins.qsdwvcxr");
+                layer1MSurge = L.mapbox.tileLayer("sxp5180.1mSurge");
+                layer3MSurge = L.mapbox.tileLayer("sxp5180.3mSurge");
+
+                layerStreets.on('load', function () {
+                    if (map.hasLayer(layerSatelliteThen)) { 
+                        map.removeLayer(layerSatelliteThen); 
+                    }
+                    
+                    $("#satcompchk").prop('disabled', true);
+                    $("#satcompchk").prop('checked', false);
+                    $("#slider").css('display', 'none');
+                });
+
+                layerSatelliteNow.on('load', function () {
+                    $("#satcompchk").prop('disabled', false);
+                });
+
+                //----Evacuation Center Icon----
+
+                fgrpEvacCenters = L.geoJson(ptsEvacCenters, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        // do icon here
+
+                        var icon = L.icon({
+                            iconUrl: './img/evacCenterIcon.png',
+                            iconSize: [24, 24]       
+                        });
+
+                        layer.setIcon(icon);
+
+                        // do pop-up here
+
+                        var popup = L.popup();
+                        popup.setContent("Name: " + feature.properties.EC_NAME + "<br/>" + 
+                                         "Address: " +feature.properties.ADDRESS + "<br/>" +
+                                         "Coordinates: " + feature.geometry.coordinates);
+
+                        layer.bindPopup(popup);
+                    }
+                });
+
+                // --- Fire Station Icon----
+
+                fgrpFireStations = L.geoJson(ptsFireStations, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        // do icon here
+
+                        var icon = L.icon({
+                            iconUrl: './img/fire.png',
+                            iconSize: [24, 24]       
+                        });
+
+                        layer.setIcon(icon);
+
+                        // do pop-up here
+
+                        var popup = L.popup();
+                        popup.setContent("Name: " + feature.properties.name + "<br/>" +
+                                        "Address: " +( feature.properties.address ? feature.properties.address.address : "")+"<br/>" +
+                                        "Coordinates: " + feature.geometry.coordinates);
+
+                        layer.bindPopup(popup);
+                    }
+                });
+
+                // ----Police Precincts Icon----
+
+                fgrpPolice = L.geoJson(ptsPolice, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        // do icon here
+
+                        var icon = L.icon({
+                            iconUrl: './img/police.png',
+                            iconSize: [24, 24]       
+                        });
+
+                        layer.setIcon(icon);
+
+                        // do pop-up here (finish editing this part below)
+
+                        var popup = L.popup();
+                        popup.setContent("Precinct Number: " + feature.properties.Name + "<br/>" +
+                                         "Address: " + feature.properties.Address + "<br/>" +
+                                         "Coordinates: " + feature.geometry.coordinates + "<br/>" +
+                                         "Phone #: " + feature.properties.Phone);
+
+                        layer.bindPopup(popup);
+                    }
+                });
+                     
+                // ----Hospitals Icon----
+
+                fgrpHospitals = L.geoJson(ptsHospitals, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        // do icon here
+
+                        var icon = L.icon({
+                            iconUrl: './img/hospital.png',
+                            iconSize: [24, 24]       
+                        });
+
+                        layer.setIcon(icon);
+
+                        // do pop-up here (finish editing this part below)
+
+                        var popup = L.popup();
+                        popup.setContent("Name: " + feature.properties.Name + "<br/>" + 
+                                         "Address: " + feature.properties.Address + "<br/>" +
+                                         "Capacity: " + feature.properties.Capacity);
+
+                        layer.bindPopup(popup);
+                    }
+                });
+
+                // ---- Evacuation Zones ----
+
+                fgrpEvacZones = L.geoJson(polysEvacZones, {
+                    'style' : function (feature) {
+                        var style = {
+                            'fillOpacity' : 0.6,
+                            'stroke' : false,
+                            'weight' : 3
+                        };
+
+                        if (feature.properties.Zone === "6") {
+                            style.fillColor = "#feedde";
+                        } else if (feature.properties.Zone === "5") {
+                            style.fillColor = "#fdd0a2";
+                        } else if (feature.properties.Zone === "4") {
+                            style.fillColor = "#fdae6b";
+                        } else if (feature.properties.Zone === "3") {
+                            style.fillColor = "#fd8d3c";
+                        } else if (feature.properties.Zone === "2") {
+                            style.fillColor = "#e6550d";
+                        } else if (feature.properties.Zone === "1") {
+                            style.fillColor = "#a63603";
+                        } else {
+                            style.fill = false;
+                        }
+
+                        return style;
+                    },
+                    'onEachFeature' : function (feature, layer) {
+
+                     }
+                });
+
+                // ---- Layer Control Groups ----
+
+                var baseMaps = {
+                    "Streets": layerStreets,
+                    "Current Satellite": layerSatelliteNow
+                };
+
+                var overlayMaps = {
+                    "Evacuation Centers": fgrpEvacCenters,
+                    "Fire Stations": fgrpFireStations,
+                    "Police Precincts": fgrpPolice,
+                    "Hospitals": fgrpHospitals,
+                    "Evacuation Zones": fgrpEvacZones,
+                    "Storm Surge (3m Depth)" : layer3MSurge,
+                    "Storm Surge (1m Depth)" : layer1MSurge
+                };
+
+                // ---- Creating a Layer Control ----
+
+                layerControl = L.control.layers(baseMaps, overlayMaps);
+
+                // ---- Initializing the Map ----
+
+                map
+                    .addLayer(layerStreets)
+                    .addControl(layerControl);
+
+                $("#satcompchk").change(function () {
+
+                    if ($("input[id=satcompchk]:checked").length > 0) {
+
+                        // ---- Update the UI ----
+
+                        $("#slider").css('display', 'inline');
+
+                        // ---- Clip the Layer ----
+
+                        var range = document.getElementById('slider');
+
+                        map.addLayer(layerSatelliteThen);
+                        layerSatelliteThen.bringToFront();
+
+                        if (map.hasLayer(fgrpEvacCenters)) { fgrpEvacCenters.bringToFront(); }
+                        if (map.hasLayer(fgrpFireStations)) { fgrpFireStations.bringToFront(); }
+                        if (map.hasLayer(fgrpHospitals)) { fgrpHospitals.bringToFront(); }
+                        if (map.hasLayer(fgrpPolice)) { fgrpPolice.bringToFront(); }
+                        if (map.hasLayer(fgrpEvacZones)) { fgrpEvacZones.bringToFront(); }
+
+                        function clip () {
+                            var nw = map.containerPointToLayerPoint([0, 0]),
+                                se = map.containerPointToLayerPoint(map.getSize()),
+                                clipX = nw.x + (se.x - nw.x) * range.value;
+
+                            layerSatelliteThen.getContainer().style.clip = 'rect(' + [nw.y, clipX, se.y, nw.x].join('px,') + 'px)';
+                        }
+
+                        range['oninput' in range ? 'oninput' : 'onchange'] = clip;
+
+                        map.on('move', clip);
+
+                        clip();
+                    } else {
+                        map
+                            .off('move')
+                            .removeLayer(layerSatelliteThen);
+
+                        $("#slider").css('display', 'none');
+                    }
+                });
+            });
+
+    </script>
+</body>
+</html>

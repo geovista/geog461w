@@ -1,0 +1,827 @@
+<!doctype html>
+<html>
+<head>
+
+    <!-- Metadata -->
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Geog 461W Final Project: Hurricane Sandy Resource Map">
+    <meta name="author" content="Anne Harris, Katie Meckler, Greg Milbourne">
+
+    <title>Geog 461W | Final Project | Hurricane Sandy Resource Map</title>
+    
+    <!-- Leaflet and MapBox Libraries -->
+
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-map.js?key=Fmjtd%7Cluur2qa7nl%2C7a%3Do5-9abx54"></script>
+    <script src="http://www.mapquestapi.com/sdk/leaflet/v1.0/mq-routing.js?key=Fmjtd%7Cluur2qa7nl%2C7a%3Do5-9abx54"></script>
+
+    <!-- jQuery Libraries -->
+
+    <script src="./style/js/jquery-1.10.2.js"></script>
+    <script src="./style/js/jquery-ui-1.10.4.custom.min.js"></script>
+    <link rel="stylesheet" href="./style/cupertino/jquery-ui-1.10.4.custom.min.css">
+    
+
+    <!-- D3 Project Libraries -->
+
+    <script src="http://d3js.org/queue.v1.min.js"></script>
+
+    <!-- Custom Styling -->
+
+    <style type="text/css">
+
+        body {
+            min-width: 650px;
+        }
+
+        #map {
+            position: absolute;
+            left: 0;
+            top: 75px;
+            width: 100%;
+            height: 500px;
+        }
+
+        .titleBar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            text-align: center;
+            font: 14pt Helvetica, sans-serif;
+            height: 75px;
+            margin: 0;
+            padding-left: 15px;
+        }
+
+        .polygonSelect {
+            width: 150px;
+        }
+
+        .pointsSelect {
+            width: 150px;
+        }
+
+        .geocoding {
+            width: 150px;
+        }
+
+        .boroughLabels {
+            text-align: center;
+            text-shadow: 2px 2px #fff;
+            vertical-align:middle;
+            font-size: 14pt;
+            color: #3182bd;
+        }
+
+        .pointSelectorButton {
+            font-size: 0.6em;
+            text-align: left;
+            vertical-align: bottom;
+            padding-left: 0.5em;
+            width: 150px;
+            height: 25px;
+        }
+
+        .bottomBlock {
+            width: 25%;
+            position: absolute;
+            top: 575px;
+            padding: 10px;
+        }
+
+        .ui-button .ui-icon.collection-icon {
+            background-image: url(./img/small/collectionIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.evacCenter-icon {
+            background-image: url(./img/small/evacCenterIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.fireStation-icon {
+            background-image: url(./img/small/firestationIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.hospital-icon {
+            background-image: url(./img/small/hospitalIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.police-icon {
+            background-image: url(./img/small/policeIcon2.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.subway-icon {
+            background-image: url(./img/small/subwayIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        .ui-button .ui-icon.wifi-icon {
+            background-image: url(./img/small/wifiIcon.png);
+            width: 10px;
+            height: 10px; 
+        }
+
+        #evacZoneLegend {
+            border: 1px solid black;
+            background-color: #fff;
+            position: absolute;
+            left: 5px;
+            top: 530px;
+            width: 150px;
+            height: 40px;
+            font-size: 8pt;
+        }
+
+        #evacZoneLegend .legend-subtitle {
+            text-align: center;
+            font-size: 9pt;
+            font-weight: bold;
+        }
+
+        #evacZoneLegend ul.evac-labels {
+            position: absolute;
+            right: 30px;
+            margin: 0;
+            padding: 0;
+            float: right;
+            list-style: none;
+        }
+
+        #evacZoneLegend ul.evac-labels li {
+            display: block;
+            float: left;
+            width: 15px;
+            margin-bottom: 6px;
+            text-align: center;
+            font-size: 80%;
+            list-style: none;
+        }
+
+        #evacZoneLegend ul.evac-labels li span {
+            display: block;
+            float: left;
+            height: 15px;
+            width: 15px;
+        }
+
+        h4 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }  
+
+    </style>
+
+</head>
+<body>
+    <div class="titleBar">
+        <h1>Hurricane Sandy Resource Map</h1>
+    </div>
+    <div id="map"></div>
+    <div id="evacZoneLegend" style="display:none;">
+        <div class="legend-subtitle">Evacuation Zones</div>
+        <ul class='evac-labels'>
+            <li><span style='background:#54278f;'></span>1</li>
+            <li><span style='background:#756bb1;'></span>2</li>
+            <li><span style='background:#9e9ac8;'></span>3</li>
+            <li><span style='background:#bcbddc;'></span>4</li>
+            <li><span style='background:#dadaeb;'></span>5</li>
+            <li><span style='background:#f2f0f7;'></span>6</li>
+        </ul>
+    </div>
+    <div id="controls">
+        <div id="polygonSelect" class="bottomBlock" style="left:0;">
+            <input type="checkbox" id="boroughs"><label class="pointSelectorButton" for="boroughs">Boroughs</label><br/>
+            <input type="checkbox" id="neighborhoods"><label class="pointSelectorButton" for="neighborhoods">Neighborhoods</label><br/>
+            <input type="checkbox" id="evacZones"><label class="pointSelectorButton" for="evacZones">Evacuation Zones</label>
+        </div>
+        <div class="bottomBlock" style="left:25%;">
+            <input class="pointSelectorButton" type="checkbox" id="hospital"><label class="pointSelectorButton" for="hospital"> Hospitals</label><br/>
+            <input class="pointSelectorButton" type="checkbox" id="evacCenter"><label class="pointSelectorButton" for="evacCenter">Evacuation Centers</label><br/>
+            <input class="pointSelectorButton" type="checkbox" id="firestation"><label class="pointSelectorButton" for="firestation">Fire Stations</label><br/>
+            <input class="pointSelectorButton" type="checkbox" id="police"><label class="pointSelectorButton" for="police">Police Stations</label><br/>
+        </div>
+        <div class="bottomBlock" style="left:50%;">
+            <input class="pointSelectorButton" type="checkbox" id="wifi"><label class="pointSelectorButton" for="wifi">Wifi Locations</label><br/>
+            <input class="pointSelectorButton" type="checkbox" id="subway"><label class="pointSelectorButton" for="subway">Subway</label><br/>
+            <input class="pointSelectorButton" type="checkbox" id="collection"><label class="pointSelectorButton" for="collection">Collection Centers</label>
+        </div>
+        <div id="geocoding" class="bottomBlock" style="left:75%;">
+            <label for="from">Find a Place</label><input id="from" ><br/>
+            <label for="to">Go to a Place</label><input id="to" ><br/>
+            <button id="clear" class="pointSelectorButton">Clear Directions</button>
+            <div>
+                <h4>More Information</h4>
+                <a href="http://www.weather.com/weather/today/USNY0996:1">New York Weather</a><br/>
+            <a href="http://www.nyc.gov/html/oem/html/hazards/storms_evaczones.shtml">Evacuation Zones</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        // ---- Feature Groups ----
+
+        var grpPtsBoroughs,
+            grpPtsCollectionSites,
+            grpPtsEvacCenters,
+            grpPtsFireStations,
+            grpPtsHospitals,
+            grpPtsNeighborhoods,
+            grpPtsPolice,
+            grpPtsSubwayEntrances,
+            grpPtsWifi,
+            grpPolyBoroughs,
+            grpPolyEvacZones,
+            grpPolyNeighborhoods,
+            grpDirections = L.featureGroup(),
+            currentLayers = L.layerGroup(),
+            addressPoint,
+            routingLayer;
+
+        // ---- User Interface Initialization ----
+
+        var map = L.mapbox.map("map", "younevern0.h43jnagb", {
+            'center' : L.latLng(40.7127, -74.0059),
+            'zoom' : 10,
+            'minZoom' : 9,
+            'zoomControl' : false
+        });
+
+        map
+            .addLayer(grpDirections)
+            .addControl(L.control.zoom({'position':'bottomright'}))
+            .on('zoomend', function () {
+                if (map.getZoom() >= 13) {
+                    setIconsWithSize([20,20]);
+                }
+
+                if (map.getZoom() < 13) {
+                    setIconsWithSize([10,10]);
+                }
+            });
+
+        $("#hospital")
+            .button({
+              icons: {
+                primary: "hospital-icon"
+              }
+            })
+            .change(filterData);
+        $("#evacCenter")
+            .button({
+              icons: {
+                primary: "evacCenter-icon"
+              }
+            })
+            .change(filterData); 
+        $("#wifi")
+            .button({
+              icons: {
+                primary: "wifi-icon"
+              }
+            })
+            .change(filterData);
+        $("#firestation")
+            .button({
+              icons: {
+                primary: "fireStation-icon"
+              }
+            })
+            .change(filterData);
+        $("#police")
+            .button({
+              icons: {
+                primary: "police-icon"
+              }
+            })
+            .change(filterData); 
+        $("#subway")
+            .button({
+              icons: {
+                primary: "subway-icon"
+              }
+            })
+            .change(filterData);
+        $("#collection")
+            .button({
+              icons: {
+                primary: "collection-icon"
+              }
+            })
+            .change(filterData);
+        $("#boroughs")
+            .button()
+            .change(filterData);
+        $("#evacZones")
+            .button()
+            .change(filterData);
+        $("#neighborhoods")
+            .button()
+            .change(filterData); 
+
+        $("#clear")
+            .button()
+            .click(function () {
+                if (addressPoint) {
+                    map.removeLayer(addressPoint)
+                    addressPoint = null;
+                }
+
+                if (routingLayer) {
+                    map.removeLayer(routingLayer)
+                }
+
+                $("#from").val("");
+                $("#to").val("");
+            })
+
+        $("#from").keypress(function (e) {
+            if (e.which === 13) {
+                if ($("#from").val().length > 0 && $("#to").val().length > 0) {
+                    getDirections();
+                } else {
+                    geocodeAddress($("#from").val(), geocodeToMap);
+                }
+            }
+        })
+
+        $("#to").keypress(function (e) {
+            if (e.which === 13) {
+                if ($("#from").val().length > 0 && $("#to").val().length > 0) {
+                    getDirections();
+                }
+            }
+        })
+
+        // ---- Loading Data ----
+
+        queue(4)
+            .defer(loadData, 'data/NYC.Points.Boroughs.json')
+            .defer(loadData, 'data/NYC.Points.EvacCenters.json')
+            .defer(loadData, 'data/NYC.Points.FireStations.json')
+            .defer(loadData, 'data/NYC.Points.Hospitals.json')
+            .defer(loadData, 'data/NYC.Points.Neighborhoods.json')
+            .defer(loadData, 'data/NYC.Points.PolicePrecincts.json')
+            .defer(loadData, 'data/NYC.Points.SubwayEntrances.json')
+            .defer(loadData, 'data/NYC.Points.WifiLocs.json')
+            .defer(loadData, 'data/NYC.Polygons.Boroughs.json')
+            .defer(loadData, 'data/NYC.Polygons.EvacZones.json')
+            .defer(loadData, 'data/NYC.Polygons.Neighborhood.json')
+            .defer(loadData, 'data/NYC.Points.CollectionSites.json')
+            .await(function (error, ptsBoroughs, ptsEvacCenters, ptsFireStations, ptsHospitals, ptsNeighborhoods, ptsPolice, ptsSubway, ptsWifi, polyBorough, polyEvac, polyNeighborhood, ptsCollectionSites) {
+
+                grpPtsBoroughs = L.geoJson(ptsBoroughs, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        var icon = L.divIcon({
+                            'className' : "boroughLabels",
+                            'html' : "<b>" + feature.properties.BoroName + "</b>",
+                            'iconSize' : [120, 30]
+                        });
+
+                        layer.setIcon(icon);
+                    }
+                });
+
+                grpPtsEvacCenters = L.geoJson(ptsEvacCenters, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.EC_NAME + "</b><br/>" +
+                            feature.properties.ADDRESS + "<br/>" +
+                            feature.properties.CITY + ", NY " +
+                            feature.properties.ZIP_CODE);
+                        
+                        layer
+                            .bindPopup(popup)
+                            .on('click', function () {
+                                if ($("#from").val().length > 0) {
+                                    $("#to").val(feature.properties.ADDRESS + " " +
+                                        feature.properties.CITY + ", NY " +
+                                        feature.properties.ZIP_CODE)
+                                    getDirections();
+                                }
+                            });
+                    }
+                });
+
+                grpPtsHospitals = L.geoJson(ptsHospitals, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.Name + "</b><br/>" +
+                            feature.properties.Address + "<br/>" +
+                            feature.properties.City + ", NY " +
+                            feature.properties.ZIP);
+                        
+                        layer
+                            .bindPopup(popup)
+                            .on('click', function () {
+                                if ($("#from").val().length > 0) {
+                                    $("#to").val(feature.properties.Address + " " +
+                                        feature.properties.City + ", NY " +
+                                        feature.properties.ZIP)
+                                    getDirections();
+                                }
+                            });
+                    }
+                });
+
+                grpPtsFireStations = L.geoJson(ptsFireStations, {
+                    'onEachFeature' : function (feature, layer) {
+                        if (feature.properties.address) {
+                            var popup = L.popup();
+                            popup.setContent(
+                                "<b>" + feature.properties.name + "</b><br/>" +
+                                feature.properties.address.address);
+                            
+                            layer
+                                .bindPopup(popup)
+                                .on('click', function () {
+                                    if ($("#from").val().length > 0) {
+                                        $("#to").val(feature.properties.address.address + " " +
+                                            feature.properties.address.city + ", " +
+                                            feature.properties.address.state + 
+                                            feature.properties.zip)
+                                        getDirections();
+                                    }
+                                });
+                        }
+                     }
+                });
+
+                grpPtsNeighborhoods = L.geoJson(ptsNeighborhoods, {
+                    'onEachFeature' : function (feature, layer) {
+
+                        var icon = L.divIcon({
+                            'className' : "neighborhoodLabels",
+                            'html' : "<b>" + feature.properties.Name + "</b>"
+                        })
+
+                        layer.setIcon(icon);
+                    }
+                });
+
+                grpPtsPolice = L.geoJson(ptsPolice, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + "Precinct: " + feature.properties.Name + "</b><br/>" +
+                            feature.properties.Address + "<br/>" +
+                            feature.properties.City + ", " +
+                            feature.properties.State + "<br/>" +
+                            feature.properties.Phone);
+                        
+                        layer
+                            .bindPopup(popup)
+                            .on('click', function () {
+                                if ($("#from").val().length > 0) {
+                                    $("#to").val(feature.properties.Address + " " +
+                                        feature.properties.City + ", " +
+                                        feature.properties.State)
+                                    getDirections();
+                                }
+                            });
+                     }
+                });
+
+                grpPtsSubwayEntrances = L.geoJson(ptsSubway, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.LINE + "</b><br/>" +
+                            feature.properties.NAME);
+                        
+                        layer.bindPopup(popup);
+                     }
+                });
+
+                grpPtsWifi = L.geoJson(ptsWifi, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.NAME + "<br/>" +
+                            feature.properties.TYPE + "</b><br/>" +
+                            feature.properties.ADDRESS + "<br/>" +
+                            feature.properties.CITY + ", NY" +
+                            feature.properties.ZIP);
+                        
+                        layer
+                            .bindPopup(popup)
+                            .on('click', function () {
+                                if ($("#from").val().length > 0) {
+                                    $("#to").val(feature.properties.ADDRESS + " " +
+                                        feature.properties.CITY + ", NY " +
+                                        feature.properties.ZIP)
+                                    getDirections();
+                                }
+                            });
+                     }
+                });
+
+                grpPtsCollectionSites = L.geoJson(ptsCollectionSites, {
+                    'onEachFeature' : function (feature, layer) {
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.name + "</b><br/>" +
+                            feature.properties.hours + "<br/>" +
+                            feature.properties.address + "<br/>" +
+                            feature.properties.phone);
+                        
+                        layer
+                            .bindPopup(popup)
+                            .on('click', function () {
+                                if ($("#from").val().length > 0) {
+                                    $("#to").val(feature.properties.address)
+                                    getDirections();
+                                }
+                            });
+                     }
+                });
+
+                grpPolyEvacZones = L.geoJson(polyEvac, {
+                    'style' : function (feature) {
+                        var style = {
+                            'fillOpacity' : 0.6,
+                            'stroke' : false,
+                            'weight' : 3
+                        };
+
+                        if (feature.properties.Zone === "1") {
+                            style.fillColor = "#54278f";
+                        } else if (feature.properties.Zone === "2") {
+                            style.fillColor = "#756bb1";
+                        } else if (feature.properties.Zone === "3") {
+                            style.fillColor = "#9e9ac8";
+                        } else if (feature.properties.Zone === "4") {
+                            style.fillColor = "#bcbddc";
+                        } else if (feature.properties.Zone === "5") {
+                            style.fillColor = "#dadaeb";
+                        } else if (feature.properties.Zone === "6") {
+                            style.fillColor = "#f2f0f7";
+                        } else {
+                            style.fill = false;
+                        }
+
+                        return style;
+                    }
+                });
+
+                grpPolyBoroughs = L.geoJson(polyBorough, {
+                    'style' : function (feature) {
+                        var style = {
+                            'fill' : false,
+                            'opacity' : 2,
+                            'color' : '#3182bd',
+                            'weight' : 3
+                        };
+
+                        return style;
+                    }
+                });
+
+                grpPolyNeighborhoods = L.geoJson(polyNeighborhood, {
+                    'style' : function (feature) {
+                        var style = {
+                            'opacity' : 3,
+                            'color' : '#9ecae1',
+                            'fillOpacity' : 0,
+                            'weight' : 1
+                        };
+
+                        return style;
+                    },
+                    'onEachFeature' : function (feature, layer) {
+
+                        var popup = L.popup();
+                        popup.setContent(
+                            "<b>" + feature.properties.NTAName + "</b><br/>" +
+                            feature.properties.BoroName);
+
+                        layer.bindPopup(popup);
+                     }
+                });            
+
+                setIconsWithSize([10,10]);
+
+                map.infoControl.addInfo('<a target="_blank" href="https://nycopendata.socrata.com/">NYC OpenData</a>');
+                map.infoControl.addInfo('<a target="_blank" href="http://www.nyc.gov/html/stuffex/html/home/home.shtml">NYC Stuff Exchange</a>');
+                map.infoControl.addInfo('Directions Courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">');
+                map.infoControl.addInfo('Designed by Annie Harris, Katherine Meckler and Greg Milbourne');
+
+                map.addLayer(currentLayers);
+           });
+
+        // ---- Utility Functions ---- 
+
+        function loadData (url, callback) {
+            $.get(url, function (data) {
+                callback(null, data);
+            })
+        }
+
+        function filterData () {
+
+            currentLayers.clearLayers();
+
+            if ($("input[id='neighborhoods']:checked").length > 0) {
+                currentLayers.addLayer(grpPolyNeighborhoods);
+            }
+
+            if ($("input[id='boroughs']:checked").length > 0) {
+                currentLayers.addLayer(grpPolyBoroughs);
+            }
+
+            if ($("input[id='boroughs']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsBoroughs);
+            }
+
+            if ($("input[id='evacZones']:checked").length > 0) {
+                currentLayers.addLayer(grpPolyEvacZones);
+                $("#evacZoneLegend").css("display", "block");
+            } else {
+                $("#evacZoneLegend").css("display", "none");
+            }
+
+            if ($("input[id='hospital']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsHospitals);
+            } 
+
+            if ($("input[id='police']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsPolice);
+            } 
+
+            if ($("input[id='evacCenter']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsEvacCenters);
+            } 
+
+            if ($("input[id='subway']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsSubwayEntrances);
+            } 
+
+            if ($("input[id='firestation']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsFireStations);
+            } 
+
+            if ($("input[id='wifi']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsWifi);
+            } 
+
+            if ($("input[id='collection']:checked").length > 0) {
+                currentLayers.addLayer(grpPtsCollectionSites);
+            }
+
+            if (grpDirections.getLayers().length > 0) {
+                grpDirections.bringToFront()
+            }
+
+        }
+
+        function setIconsWithSize (size) {
+            grpPtsCollectionSites.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/collectionIcon.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsEvacCenters.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/evacCenterIcon.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsFireStations.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/firestationIcon.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsHospitals.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/hospitalIcon.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsPolice.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/policeIcon2.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsSubwayEntrances.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/subwayIcon.png',
+                    'iconSize' : size
+                }))
+            })
+            grpPtsWifi.eachLayer(function (layer) { 
+                layer.setIcon(L.icon({
+                    'iconUrl' : './img/wifiIcon.png',
+                    'iconSize' : size
+                }))
+            })
+        }
+
+        // ---- Geocoding ----
+
+        function geocodeAddress (address, callback) {
+            if (!address) { 
+                return callback("ERROR: Geocoder - An address string must be provided.", null);
+
+            }
+
+            if (!callback) {
+                return callback("ERROR: Geocoder - A callback function must be provided.", null);
+            }
+
+            var base = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=";
+            var uri = encodeURI(base + address);
+
+            $.get(uri)
+                .done(function (data) {
+                    if (!data || !data.results || data.results.length < 1) {
+                        return callback("ERROR: Geocoder - Response object not parse-able.", null);
+                    }
+
+                    var bestMatch = data.results[0];
+                    var feature = {
+                        'type' : 'Feature',
+                        'properties' : {
+                            'requestedAddress' : address,
+                            'foundAddress' : bestMatch.formatted_address
+                        },
+                        'geometry' : {
+                            'type' : 'Point',
+                            'coordinates' : [
+                                bestMatch.geometry.location.lng, 
+                                bestMatch.geometry.location.lat
+                            ]
+                        }
+                    }
+
+                    callback(null, feature);
+                })
+                .fail(function () {
+                    return callback("ERROR: Geocoder - Failed to contact Google Geocoding API.", null);
+                })
+        }
+
+        function geocodeToMap (error, feature) {
+            if (error) { return console.error(error); }
+
+            if (addressPoint) { 
+                map.removeLayer(addressPoint);
+                addressPoint = null;
+            }
+
+            grpDirections.clearLayers();
+
+            setIconsWithSize([20,20]);
+            addressPoint = L.geoJson(feature).addTo(map)
+            map.setView(feature.geometry.coordinates.reverse(), 16);
+        }
+
+        // ---- Directions ----
+
+        function getDirections () {
+            var directions = MQ.routing.directions();
+
+            if (addressPoint) { 
+                map.removeLayer(addressPoint);
+                addressPoint = null;
+            }
+
+            if (routingLayer) {
+                map.removeLayer(routingLayer)
+            }
+
+            directions.route({
+                'locations' : [
+                    $("#from").val(),
+                    $("#to").val()
+                ]
+            });
+
+            routingLayer = MQ.routing.routeLayer({
+                'directions': directions,
+                'fitBounds': true
+            })
+
+            map.addLayer(routingLayer)
+        }
+
+    </script>
+</body>
+</html>

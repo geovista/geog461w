@@ -1,0 +1,40 @@
+svg {
+  font: 10px sans-serif;
+}
+
+.background path {
+  fill: none;
+  stroke: #ccc;
+  stroke-opacity: .4;
+  shape-rendering: crispEdges;
+}
+
+.foreground path {
+  fill: none;
+  stroke: #3ADF00;   /*color of the lines on the PCP*/
+  stroke-opacity: .7;
+  stroke-width: 1.8;
+}
+
+.brush .extent {
+  fill-opacity: .3;
+  stroke: #BCF5A9;
+  shape-rendering: crispEdges;
+}
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  text-shadow: 0 1px 0 #fff;
+  cursor: move;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 9px;
+}
+
+.foreground path .selected {
+    stroke: red;    
+}
